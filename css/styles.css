@@ -1,0 +1,178 @@
+#main_content {
+	width: 940px;
+}
+
+#left_column_key {
+    border: 1px solid #ccc;
+    width: 300px;
+    font-family: Arial,Helvetica,sans-serif;
+    padding: 0 0 0 5px;
+	font-size: 13px;
+}
+
+#left_column_key #legend_violentcrimes {
+    width: 300px;
+}
+
+#left_column_key #legend_propertycrimes {
+    width: 300px;
+}
+
+#left_column_key h3 {
+    font-family: Georgia,serif;
+	font-size: 20px;
+    margin-bottom: 0px;
+	margin-top: 5px;
+}
+
+h2 {
+    font-family: Georgia,serif;
+}
+
+td {
+    vertical-align: top;
+    margin: 5px;
+}
+
+#legend {
+    font-size: 12px;
+    text-align: middle;
+}
+#legend td {
+    vertical-align: middle;
+}
+
+h2 {
+    padding: 0 0 0 5px;
+    margin: 5px 5px 5px 0;
+	font-family: Georgia,serif;
+}
+
+#search_box {
+    margin: 10px 5px 0 5px;
+}
+
+#search_box p {
+    font-size: 14px;
+}
+
+#types_of_crimes label.checkbox {
+	text-align: left;
+	padding-top: 2px;
+}
+
+#types_of_crimes label {
+	width: 150px;
+	font-size: 13px;
+}
+
+#legend_note {
+    padding: 5px;
+}
+
+#rollover_text {
+    padding: 8px;
+}
+
+.popup_box_header {
+    font-size: 13px;
+}
+
+.control-group {
+	margin: 0 5px 0 0;
+    width: 300px;
+}
+
+
+#map {
+    border: 1px solid #ccc;
+    width: 620px;
+    height: 650px;
+}
+
+#hover {
+    font-weight: bold;
+	margin-top: 10px;
+	font-size: 14px;
+}
+#date_slider_box {
+    border: 1px solid #ccc;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 13px;
+}
+
+#date_slider_box h3 {
+    font-family: Georgia,serif;
+	font-size: 20px;
+    margin-bottom: 0px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+#date_slider {
+    width: 530px;
+    margin: 20px 0 0 45px;
+}
+
+
+#homicide_bar {
+	background-color: #252525;
+	border-right: 1px solid #252525;
+}
+#shooting_bar {
+	background-color: #67000D;
+	border-right: 1px solid #252525;
+}
+#weapons_bar {
+	background-color: #CB181D;
+	border-right: 1px solid #252525;
+}
+#robbery_bar {
+	background-color: #FB6A4A;
+	border-right: 1px solid #252525;
+}
+#assault_bar {
+	background-color: #FCBBA1;
+	border-right: 1px solid #252525;
+}
+#hit_and_run_bar {
+	background-color: #54278F;
+	border-right: 1px solid #252525;
+}
+#burglary_bar {
+	background-color: #807DBA;
+	border-right: 1px solid #252525;
+}
+#center_align {
+	text-align: center;
+
+
+
+#crime_table_wrapper {
+    width: 940px;
+}
+
+
+#crime_table {
+    border: 1px solid #ccc;
+    width: 940px;
+    float: left;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    text-align: left;
+}
+
+#crime_table th {
+    padding: 7px 0 7px 5px;
+    font-weight: bold;
+}
+#crime_table td {
+    padding: 7px 0 7px 5px;
+}
+
+#crime_table_length label {
+    width: 470px;
+}
+#crime_table_filter {
+    width: 470px;
+}

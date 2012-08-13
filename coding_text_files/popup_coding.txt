@@ -1,0 +1,17 @@
+ popup += "<div class='popup_box_header'><strong>" + crime_formatted + "</strong></div>"
+    
+    // Add the rest of the popup
+    popup += "<strong>Date:</strong> " + crime_data[incident].date + "<br />";
+    popup += "<strong>Time:</strong> " + crime_data[incident].times2 + "<br />";
+    popup += "<strong>Location:</strong> " + lowercase_letters(crime_data[incident].location) + "<br />";
+    popup += "<strong>Result:</strong> " + lowercase_letters(crime_data[incident].disposition) + "<br />";
+    popup += "</div>";
+    layer.bindPopup(popup);
+
+
+	popup += "On <strong>" + crime_data[incident].date + "</strong> at <strong>" + crime_data[incident].times2 + "</strong>, police responded to a report of a <strong>" + crime_formatted + "</strong> at the location of:<br />";
+    popup += "<strong>" +  lowercase_letters(crime_data[incident].location) + "</strong><br />";
+    popup += "Police listed the disposition in the case as:<br />";
+    popup += "<strong>" + lowercase_letters(crime_data[incident].disposition) + "</strong>";
+    popup += "</div>";
+    layer.bindPopup(popup);

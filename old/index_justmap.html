@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Map: Crimes reported in Waterloo, Iowa</title>
+	<link rel="stylesheet" href="leaflet/leaflet.css" />
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="leaflet/leaflet.ie.css"  />
+	<![endif]-->
+	<script src="leaflet/leaflet.js"></script>
+	
+	<link rel="stylesheet" type="text/css" id="themeCSS" href="jQRangeSlider/css/classic.css">
+	<link rel="stylesheet" type="text/css" href="jQRangeSlider/demo/style.css">
+	<link rel="stylesheet" type="text/css" href="jQRangeSlider/demo/lib/jquery-ui/css/smoothness/jquery-ui-1.8.10.custom.css">
+	
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.css">
+
+	<link rel="stylesheet" type="text/css" href="datatables/DT_bootstrap.css">
+
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="jQRangeSlider/demo/lib/jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+	<script src="jQRangeSlider/lib/jquery.mousewheel.min.js"></script>
+	
+	<script type="text/javascript" src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap-tab.js"></script>
+
+	<script type="text/javascript" src="datatables/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="datatables/DT_bootstrap.js"></script>
+	
+    <script language="javascript" type="text/javascript" src="flot/excanvas.js"></script>
+	<script language="javascript" type="text/javascript" src="flot/jquery.flot.min.js"></script>
+	<script language="javascript" type="text/javascript" src="flot/jquery.flot.pie.js"></script>
+	
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	
+	<script src="crime_data.json"></script>
+</head>
+<body onLoad="last_updated()">
+<br />
+<div id="main_content">
+
+<div id="header">
+	<div id="share">
+		<ul><li>
+			<a data-text="" href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+			<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		</li><li>
+			<g:plusone size="medium"></g:plusone>
+		</li><li>
+			<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=161694630579757&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="90" show_faces="false" font=""></fb:like>
+		</li></ul>
+	</div>
+	
+<h2>Crimes reported in Waterloo</h2>
+</div>
+
+<hr>
+
+<table id="intro_table">
+	<tr>
+		<td width="90%">
+		<p>The map below displays crimes reported in Waterloo, Iowa to the Waterloo Police Department. The information is gathered from the police department, which keeps a <a href="http://waterloopolice.com/index.php?option=com_content&view=section&layout=blog&id=16&Itemid=31" target="_blank">log of calls for service</a> that is updated on a daily basis. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected eight categories of reports to map.</p>
+		<p>The map is color coded depending on the type of call. Click on the markers on the map for more information on the call.</p>
+		</td>
+		<td width="10%"><div id="last_updated"></div></td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<td id="left_column_key">
+			<table id="legend_violentcrimes">
+				<h3>Violent crimes</h3>
+				<tr><td>
+				<div id="homicide">
+					<img src="icons/homicide_icon.jpg" />
+					Homicide
+				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<div id="shooting">
+					<img src="icons/shooting_icon.jpg" />
+					Shooting in progress
+				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<div id="weapons_shotsfired">
+					<img src="icons/weapon_shotsfired_icon.jpg" />
+					Weapons: Shots fired
+				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<div id="Weapons Violations">
+					<img src="icons/weapons_violations_icon.jpg" />
+					Weapons violations
+				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<div id="Robbery">
+					<img src="icons/robbery_icon.jpg" />
+					Robbery
+				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<div id="Assault">
+					<img src="icons/assault_icon.jpg" />
+					Assault
+				</div>
+				</td>
+				</tr>
+			</table>
+			<table id="legend_propertycrimes">
+				<h3>Property crimes</h3>
+				<tr><td id="legend_propertycrimes">
+				<div id="mva">
+					<img src="icons/mva_hitandrun_icon.jpg" />
+					Hit and run
+				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
+				<div id="burglary">
+					<img src="icons/burglary_icon.jpg" />
+					Burglary
+				</div>
+				</td>
+				</tr>
+				<tr>
+			</table>
+			<br />
+			<h3>Types of crimes</h3>
+			<p>Select from the types of crimes below to see them plotted on the map.</p>
+			<div class="control-group">
+			<table width="300px">
+				<tr><td>
+			    	<div class="controls span2">
+			        	<label class="checkbox">
+			            	<input type="checkbox" onClick="initialize_map(start, end);" checked="checked" id="homicide_box" />Homicide
+			        	</label>
+			        	<label class="checkbox">
+		            		<input type="checkbox" onClick="initialize_map(start, end);" checked="checked" id="shooting_in_progress" />Shooting in progress
+		        		</label>
+						<label class="checkbox">
+			            	<input type="checkbox" onClick="initialize_map(start, end);" checked="checked" id="weapons_shotsfired_box" />Shots fired
+			        	</label>
+						<label class="checkbox">
+			            	<input type="checkbox" onClick="initialize_map(start, end);" checked="checked" id="mva_box" />Hit and run 
+			        	</label>
+			    	</div>
+				</td>
+				<td>
+			    	<div class="controls span2">
+						<label class="checkbox">
+		            		<input type="checkbox" onClick="initialize_map(start, end);" checked="checked" id="weapons_violations" />Weapons violations
+		        		</label>
+						<label class="checkbox">
+				            <input type="checkbox" onClick="initialize_map(start, end);" checked="checked" id="robbery" />Robbery
+				        </label>
+						<label class="checkbox">
+			            	<input type="checkbox" onClick="initialize_map(start, end);" checked="checked" id="assault" />Assault
+			        	</label>
+			        	<label class="checkbox">
+			            	<input type="checkbox" onClick="initialize_map(start, end);" checked="checked" id="burglary_box" />Burglary
+			        	</label>
+			    	</div>
+				</td></tr>
+			</table>
+			<br />
+			<h3>Compare crimes</h3>
+			<p>This chart compares how often crimes plotted on the map are reported.</p>
+			<div id="graph"></div>
+			<div id="hover"></div>
+			</div>
+		</td>
+		<td>
+			<div id="map"></div>
+			<div id="date_slider_box">
+				<h3>Date range</h3>
+				<p>Select a date range to plot the crimes on the map.</p>
+				<br />
+				<br />
+				<div id="date_slider"></div>
+			</div>
+			<script src="jQRangeSlider/jQRangeSlider-min.js"></script>
+			<script src="jQRangeSlider/jQDateRangeSlider-min.js"></script>
+			<script src="script.js"></script>
+		</td>
+	</tr>
+</table>
+</div>
+<br />
+
+<h2>Search through the records</h2>
+
+<table class="table table-striped table-bordered" id="crime_table">
+	<thead>
+		<tr>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Crime</th>
+			<th>Location</th>
+			<th>Disposition</th>
+		</tr>
+	</thead>
+	<tbody id="crime_table_tbody">
+	</tbody>
+</table>
+
+<br />
+<br />
+<br />
+
+<div id="credits">
+	Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a><br />
+	Data provided by: <a href="http://www.waterloopolice.com/images/crpress.PDF" target="_blank">Waterloo Police Department</a>
+</div>
+
+<br />
+</div>
+</body>
+</html>
