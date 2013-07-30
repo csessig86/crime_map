@@ -53,12 +53,11 @@
 }
 
 .dataTables_length {
-	width: 40%;
 	float: left;
+	padding-bottom: 15px;
 }
 
 .dataTables_filter {
-	width: 50%;
 	float: right;
 	text-align: right;
 }

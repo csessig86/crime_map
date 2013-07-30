@@ -1,5 +1,5 @@
 <?php
-$title = 'WCFCourier.com | Map: Crimes reported in Waterloo, Iowa';
+$title = 'WCFCourier.com | Map: Crimes reported in the Cedar Valley';
 $pageKeywords = '';
 $pageDescription = '';
 $forceTabOpen = 'home';
@@ -7,23 +7,23 @@ $sidebar = 'false'; # uncomment to hide sidebar
 ?>
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/app/header.php'); ?>
+
 <script type="text/javascript">
-function toggle(num,tabId,int){
-    var i = 1;
-    while(i <= int){
-        if(num!=1){
-            document.getElementById(tabId+'1').className='null';
-        }
-        if(num == i){
-            document.getElementById(tabId+i).className='selected';
-            document.getElementById("div_"+tabId+i).style.display="block";
-        } else {
-            document.getElementById(tabId+i).className='null';
-            document.getElementById("div_"+tabId+i).style.display="none";
-        }
-        i++;
-    }
+<!--
+if ((screen.width < 640) && (screen.height < 960)) {
+	document.location='index_mobile.php';
 }
+//-->
+<!--
+if ((navigator.userAgent.match(/iPhone/i)) || 
+	(navigator.userAgent.match(/iPod/i)) ||
+	(navigator.userAgent.match(/iPad/i)) ||
+	(navigator.userAgent.match(/Android/i)) ||
+	(navigator.userAgent.match(/webOS/i)) ||
+	(navigator.userAgent.match(/BlackBerry/))) {
+		location.replace("index_mobile.php");
+}
+-->
 </script>
 
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
@@ -59,6 +59,10 @@ body p {
     margin: 0 0 0 5px;
 }
 
+.border {
+	border: 1px solid #3d3d3d;
+	padding: 5px;
+}
 #share {
     float:right;
     position:relative;
@@ -116,75 +120,122 @@ hr {
 	color: #778899;
 }
 </style>
-<body onLoad="last_updated()">
-
+<body>
 
 <div id="p_container">
 <?php #include($_SERVER['DOCUMENT_ROOT'].'/app/includes/template/auxbar.php'); ?>
 <div id="p_content">
 
 <div id="main_content">
-
-<div id="header">
-	<div id="share">
-		<ul><li>
-			<a data-text="" href="http://twitter.com/share" url="http://wcfcourier.com/app/crime_map/" class="twitter-share-button" data-count="horizontal">Tweet</a>
-			<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-		</li><li>
-			<g:plusone size="medium"></g:plusone>
-		</li><li>
-			<div id="fb-root"></div>
-			<script src="http://connect.facebook.net/en_US/all.js#appId=161694630579757&amp;xfbml=1"></script>
-            <fb:like href="" send="false" layout="button_count" width="90" show_faces="false" font=""></fb:like>
-		</li></ul>
+	
+	<div id="header">
+		<div id="share">
+			<ul><li>
+				<a data-text="" href="http://twitter.com/share" url="http://wcfcourier.com/app/crime_map/" class="twitter-share-button" data-count="horizontal">Tweet</a>
+				<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			</li><li>
+				<g:plusone size="medium"></g:plusone>
+			</li><li>
+				<div id="fb-root"></div>
+				<script src="http://connect.facebook.net/en_US/all.js#appId=161694630579757&amp;xfbml=1"></script>
+	            <fb:like href="" send="false" layout="button_count" width="90" show_faces="false" font=""></fb:like>
+			</li></ul>
+		</div>
 	</div>
-</div>
-
-<h2>Crimes reported in Waterloo, Iowa</h2>
+	
+<h2>Crimes reported in the Cedar Valley</h2>
 
 <hr>
 
+<p>These maps display crimes reported in Waterloo and Cedar Falls, Iowa. Select a map for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department and the Cedar Falls Police Department.</p>
+
+<p>For the mobile/tablet version of this app, <a href="index_mobile.php">click here</a>. For reports from 2012, <a href="http://wcfcourier.com/app/crime_map2012/" target="_blank">click here</a>.</p>
+
 <table id="intro_table">
 	<tr>
-		<td width="90%">
-		<p>The map below displays crimes reported in Waterloo, Iowa, since the beginning of July. The information is gathered from the Waterloo Police Department, which keeps a <a href="http://waterloopolice.com/index.php?option=com_content&view=section&layout=blog&id=16&Itemid=31" target="_blank">log of calls for service</a> that is updated on a daily basis. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected seven categories of reports to map.</p>
-		<p>The map is color coded depending on the type of call. Click on the markers on the map for more information on the call. Select a month below to filter the number of reported crimes that are pinpointed on the map.</p>
+		<td><h3>Waterloo</h3></td>
+		<td><h3>Cedar Falls</h3></td>
+	</tr>
+	<tr>
+		<td width='50%' class='border'>
+			<a href='index_wloo.php'>
+				<img src='templates/wloo_screenshot.jpg' width='100%' />
+			</a>
 		</td>
-		<td width="10%"><div id="last_updated"></div></td>
+		<td width='50%' class='border'>
+			<a href='index_cf.php'>
+				<img src='templates/cf_screenshot.jpg' width='100%' />
+			</a>
+		</td>
 	</tr>
 </table>
-
-<iframe class="map_embed" height="1450" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='map_index_aug.php'></iframe>
-
 </div>
 
+<br />
+<br />
 <div id="credits">
-	Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	Data provided by: <a href="http://www.waterloopolice.com/images/crpress.PDF" target="_blank">Waterloo Police Department</a>
+	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	Data provided by: <a href="http://www.waterloopolice.com/images/crpress.PDF" target="_blank">Waterloo Police Department</a> and the <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a>
     <br />
-    * Note: For best results, use a browser other than Internet Explorer.
+    * Note: For best results, use a browser other than Internet Explorer.</p>
 </div>
 
 </div><!-- close p_content -->	
 </div><!-- close p_container -->
-<script src="JSON/crime_data.json"></script>
-<script type="text/javascript">
-// This variable is used to calculate the last date in the JSON file
-// We'll then use it with the slider
-count = 0;
 
-for (incident in crime_data) {
-	count++;
-}
+<!-- SiteCatalyst code version: H.7. Copyright 1997-2006 Omniture, Inc. navblack info available at http://www.omniture.com -->
+	<script language="JavaScript" src="http://www.wcfcourier.com/app/omniture/s_code.js" type="text/javascript"></script>
+	<script language="JavaScript" type="text/javascript"><!--
+/* You may give each page an identifying name, server, and channel on the next lines. */
+	s.pageName="Crimes reported in the Cedar Valley"
+	s.server="Waterloo"
+	s.channel="wcfcourier.com"
+	s.pageType=""
+	s.prop1=""
+	s.prop2=""
+	s.prop3=""
+	s.prop4=""
+	s.prop5=""
+	s.prop6=""
+	s.prop7=""
+	s.prop8=""
+	s.prop9=""
+	s.prop10=""
+	s.prop11=""
+	s.prop12=""
+	s.prop13=""
+	s.prop14=""
+	s.prop15=""
+	s.prop16=""
+	s.prop17=""
+	s.prop18=""
+	s.prop19=""
+	s.prop20=""
+	s.prop21=""
+	s.prop22=""
+	s.prop23=""
 
-// Split the first and last date in the JSON file
-// Then set it in the slider below
-first_date = crime_data[0].date.split("-");
-last_date = crime_data[count -1].date.split("-");
+/* E-commerce Variables */
+	s.campaign=""
+	s.state=""
+	s.zip=""
+	s.events=""
+	s.products=""
+	s.purchaseID=""
+	s.eVar1=""
+	s.eVar2=""
+	s.eVar3=""
+	s.eVar4=""
+	s.eVar5=""
 
-function last_updated() {
-    $('#last_updated').html('Last updated: <br /> <div id="last_updated_red_text">' + (last_date[1]) + '-' + last_date[2] + '-' +  last_date[0] + '</div>')
-}
-
-</script>
+/* Hierarchy Variables */
+	s.hier1="Lee Enterprises," + s.server + "," + s.channel + "," + s.prop1 + "," + s.prop2 + "," + s.prop3 + "," + s.prop4 + "," + s.prop5
+	s.hier2="Lee Enterprises," + s.prop1 + "," + s.server + "," + s.channel + "," + s.prop2 + "," + s.prop3 + "," + s.prop4 + "," + s.prop5
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+	var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+		<script language="JavaScript" type="text/javascript"><!--
+	if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+	//--></script>
+<!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.7. -->
 </body>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/app/footer.php'); ?>

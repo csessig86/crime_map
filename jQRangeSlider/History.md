@@ -1,5 +1,38 @@
 jQRangeSlider
 -------------
+* 5.0.2: 2013-03-17
+	* Fixed #93 (theming with scales): ticks and handle values desynchronized on the right
+* 5.0.1: 2013-03-07
+	* Fixed #90 dateRangeSlider displayed outside of the innerbar when setting the range
+* 5.0: 2013-02-09
+	* Scales
+	* New element in handles, can be used for styling. ui-range-slider-handle-inner
+* 4.2.10: 2013-02-08
+	* Fixed #79: Bar not correctly updated after window resizing, with auto margin on container
+* 4.2.9: 2013-01-17
+	* Technical release: modified manifest to appear in plugins.jquery.com
+* 4.2.8: 2013-01-16
+	* Fixed #73: Can't always set the slider values programatically
+* 4.2.7: 2013-01-03
+	* Fixed #71: Labels not hidden when scrolling with arrows
+* 4.2.6: 2012-11-30
+	* Fixed #59: NaN value in date slider
+* 4.2.5: 2012-11-28
+	* Fixed #58: Date labels are shifted after parent resize, even after calling resize method
+	* Fixed #35: Event drag (used internally) conflicts with other libraries. Renamed to sliderDrag.
+* 4.2.4: 2012-11-19
+	* Fixed a bug in resize method, when displaying a slider in a previously hidden parent.
+	* Bug in label positionning
+* 4.2.3: 2012-11-16
+	* Fixed #52 and #53: Labels shown when valueLabels option set to "change"
+	* Fixed #51: right label display bug in Chrome
+* 4.2.2: 2012-11-08
+	* Fixed #46: Labels swap when they are very close
+	* Fixed #45: Access to a property of a null object
+	* Fixed #49: UserValuesChanged event fired when changing values programmatically
+* 4.2.1: 2012-10-04
+	* Fixed wheelmode setter in constructor
+	* Documentation update
 * 4.2: 2012-06-18
 	* Draggable labels (Issue #28)
 * 4.1.2: 2012-06-11

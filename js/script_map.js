@@ -3,9 +3,18 @@ var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/f14689c8008d43da9028a70e6a8e71
 cloudmadeAttribution = 'Map data CCBYSA &copy; 2012 OpenStreetMap contributors, Imagery &copy; 2012 CloudMade',
 cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
 
-// Set default zoom to Waterloo
-var map = new L.Map('map');
-map.setView(new L.LatLng(42.495, -92.34), 13).addLayer(cloudmade);
+// Set default zoom to either Waterloo or Cedar Falls
+// Depends on the url to contain the word 'wloo' or 'cf'
+if (window.document.URL.indexOf('templates/wloo') > 0) {
+	var map = new L.Map('map');
+	map.setView(new L.LatLng(42.495, -92.34), 13).addLayer(cloudmade);	
+} else if (window.document.URL.indexOf('templates/cf') > 0) {
+	var map = new L.Map('map');
+	map.setView(new L.LatLng(42.527, -92.445), 13).addLayer(cloudmade);
+} else {
+    var map = new L.Map('map');
+    map.setView(new L.LatLng(42.495, -92.34), 11).addLayer(cloudmade);  
+}
 
 // Crimes that fit between the two dates
 // In the date slide
@@ -38,7 +47,7 @@ for (incident in crime_data) {
     } else if (crime_data[incident].times2 > 12) {
         crime_data[incident].times2 = crime_data[incident].times2 - 12 + ':' + crime_data[incident].times[1] + ' p.m.';
     }
-    count ++; 
+    count ++;
 }
 
 // Convert fields with all uppercase letters
@@ -162,7 +171,8 @@ function initialize_map(start, end) {
     // Lat and long
     function set_marker(lat, long, icon_url) {
         var icon_location = L.icon({
-            iconUrl: 'icons/' + icon_url + '.png'
+            iconUrl: 'http://wcfcourier.com/app/crime_map/icons/' + icon_url + '.png',
+			iconSize: [20, 20]
         });
 		// var icon_hover = L.icon({
             // iconUrl: 'icons/' + icon_url + '_hover.png'
@@ -191,17 +201,53 @@ function initialize_map(start, end) {
         // To make it look cleaner on the site
         if (crime_data[incident].crime === 'SHOOTING IN PROGRESS/JUST') {
             crime_formatted = 'Shooting in progress';
+        } else if (crime_data[incident].crime === 'SHOOTING IN PROGRESS/') {
+            crime_formatted = 'Shooting in progress';
+        } else if (crime_data[incident].crime === 'SHOOTING IN PROGRESS') {
+            crime_formatted = 'Shooting in progress';
+        } else if (crime_data[incident].crime === 'SHOOTING IN') {
+            crime_formatted = 'Shooting in progress';
         } else if (crime_data[incident].crime === 'WEAPON:SHOTS FIRED') {
             crime_formatted = 'Weapon: Shots fired';
         } else if (crime_data[incident].crime === 'WEAPONS VIOLATIONS') {
             crime_formatted = 'Weapons violations';
+        } else if (crime_data[incident].crime === 'ROBBERY IN PROGRESS/JUST') {
+            crime_formatted = 'Robbery in progress';
+        } else if (crime_data[incident].crime === 'ROBBERY IN PROGRESS/') {
+            crime_formatted = 'Robbery in progress';
+        } else if (crime_data[incident].crime === 'ROBBERY IN PROGRESS') {
+            crime_formatted = 'Robbery in progress';
+        } else if (crime_data[incident].crime === 'ROBBERY IN') {
+            crime_formatted = 'Robbery in progress';
+        } else if (crime_data[incident].crime === 'STABBING IN PROGRESS/JUST') {
+            crime_formatted = 'Stabbing in progress';
+        } else if (crime_data[incident].crime === 'STABBING IN PROGRESS/') {
+            crime_formatted = 'Stabbing in progress';
+        } else if (crime_data[incident].crime === 'STABBING IN PROGRESS') {
+            crime_formatted = 'Stabbing in progress';
+        } else if (crime_data[incident].crime === 'STABBING IN') {
+            crime_formatted = 'Stabbing in progress';
         } else if (crime_data[incident].crime === 'ASSAULT/AMBULANCE REQUESTED') {
             crime_formatted = 'Assault: Ambulance requested';
         } else if (crime_data[incident].crime === 'ASSAULT IN PROGRESS/JUST') {
             crime_formatted = 'Assault in progress';
+        } else if (crime_data[incident].crime === 'ASSAULT IN PROGRESS/') {
+            crime_formatted = 'Assault in progress';
+        } else if (crime_data[incident].crime === 'ASSAULT IN PROGRESS') {
+            crime_formatted = 'Assault in progress';
+        } else if (crime_data[incident].crime === 'ASSAULT IN') {
+            crime_formatted = 'Assault in progress';
+        } else if (crime_data[incident].crime === 'ASSAULT/RAPE') {
+            crime_formatted = 'Assault/Rape';
         } else if (crime_data[incident].crime === 'MVA HIT & RUN') {
             crime_formatted = 'Hit and run';
         } else if (crime_data[incident].crime === 'BURGLARY IN PROGRESS/JUST') {
+            crime_formatted = 'Burglary in progress';
+        } else if (crime_data[incident].crime === 'BURGLARY IN PROGRESS/') {
+            crime_formatted = 'Burglary in progress';
+        } else if (crime_data[incident].crime === 'BURGLARY IN PROGRESS') {
+            crime_formatted = 'Burglary in progress';
+        } else if (crime_data[incident].crime === 'BURGLARY IN') {
             crime_formatted = 'Burglary in progress';
         // The rest we will lowercase every letter
         // But the first
@@ -247,7 +293,7 @@ function initialize_map(start, end) {
                 crime_data_table += '<td>' + lowercase_letters(crime_data[incident].location) + '</td>';
                 crime_data_table += '<td>' + lowercase_letters(crime_data[incident].disposition) + '</td>';
                 crime_data_table += '</tr>';
-            } else if (crime_data[incident].crime === 'SHOOTING IN PROGRESS/JUST' && document.getElementById('shooting_box').checked === true) {
+            } else if (crime_data[incident].crime === 'SHOOTING IN PROGRESS/JUST' && document.getElementById('shooting_box').checked === true || crime_data[incident].crime === 'SHOOTING IN PROGRESS/' && document.getElementById('shooting_box').checked === true || crime_data[incident].crime === 'SHOOTING IN PROGRESS' && document.getElementById('shooting_box').checked === true || crime_data[incident].crime === 'SHOOTING IN' && document.getElementById('shooting_box').checked === true) {
                 icon_url = 'shooting_icon';
                 set_marker(lat, long, icon_url);
                 shooting_total += 1;
@@ -292,7 +338,37 @@ function initialize_map(start, end) {
                 crime_data_table += '<td>' + lowercase_letters(crime_data[incident].location) + '</td>';
                 crime_data_table += '<td>' + lowercase_letters(crime_data[incident].disposition) + '</td>';
                 crime_data_table += '</tr>';
+            } else if (crime_data[incident].crime === 'STABBING IN PROGRESS/JUST' && document.getElementById('weapons_violations').checked === true || crime_data[incident].crime === 'STABBING IN PROGRESS/' && document.getElementById('weapons_violations').checked === true || crime_data[incident].crime === 'STABBING IN PROGRESS' && document.getElementById('weapons_violations').checked === true || crime_data[incident].crime === 'STABBING IN' && document.getElementById('weapons_violations').checked === true) {
+                icon_url = 'weapons_icon';
+                set_marker(lat, long, icon_url);
+                weapons_violations_total += 1;
+                // We'll add the crime information in the JSON file
+                // And table data
+                // To a blank variable
+                // And later add that to our DataTable
+                crime_data_table += '<tr>';
+                crime_data_table += '<td>' + crime_data[incident].date + '</td>';
+                crime_data_table += '<td>' + crime_data[incident].times2 + '</td>';
+                crime_data_table += '<td>' + crime_formatted + '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].location) + '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].disposition) + '</td>';
+                crime_data_table += '</tr>';
             } else if (crime_data[incident].crime === 'ROBBERY' && document.getElementById('robbery').checked === true) {
+                icon_url = 'robbery_icon';
+                set_marker(lat, long, icon_url);
+                robbery_total += 1;
+                // We'll add the crime information in the JSON file
+                // And table data
+                // To a blank variable
+                // And later add that to our DataTable
+                crime_data_table += '<tr>';
+                crime_data_table += '<td>' + crime_data[incident].date + '</td>';
+                crime_data_table += '<td>' + crime_data[incident].times2 + '</td>';
+                crime_data_table += '<td>' + crime_formatted + '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].location) + '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].disposition) + '</td>';
+                crime_data_table += '</tr>';
+            } else if (crime_data[incident].crime === 'ROBBERY IN PROGRESS/JUST' && document.getElementById('robbery').checked === true || crime_data[incident].crime === 'ROBBERY IN PROGRESS/' && document.getElementById('robbery').checked === true || crime_data[incident].crime === 'ROBBERY IN PROGRESS' && document.getElementById('robbery').checked === true || crime_data[incident].crime === 'ROBBERY IN' && document.getElementById('robbery').checked === true) {
                 icon_url = 'robbery_icon';
                 set_marker(lat, long, icon_url);
                 robbery_total += 1;
@@ -337,7 +413,22 @@ function initialize_map(start, end) {
                 crime_data_table += '<td>' + lowercase_letters(crime_data[incident].location) + '</td>';
                 crime_data_table += '<td>' + lowercase_letters(crime_data[incident].disposition) + '</td>';
                 crime_data_table += '</tr>';
-            } else if (crime_data[incident].crime === 'ASSAULT IN PROGRESS/JUST' && document.getElementById('assault').checked === true) {
+            } else if (crime_data[incident].crime === 'ASSAULT IN PROGRESS/JUST' && document.getElementById('assault').checked === true || crime_data[incident].crime === 'ASSAULT IN PROGRESS/' && document.getElementById('assault').checked === true || crime_data[incident].crime === 'ASSAULT IN PROGRESS' && document.getElementById('assault').checked === true || crime_data[incident].crime === 'ASSAULT IN' && document.getElementById('assault').checked === true) {
+                icon_url = 'assault_icon';
+                set_marker(lat, long, icon_url);
+                assault_total += 1;
+                // We'll add the crime information in the JSON file
+                // And table data
+                // To a blank variable
+                // And later add that to our DataTable
+                crime_data_table += '<tr>';
+                crime_data_table += '<td>' + crime_data[incident].date + '</td>';
+                crime_data_table += '<td>' + crime_data[incident].times2 + '</td>';
+                crime_data_table += '<td>' + crime_formatted + '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].location) + '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].disposition) + '</td>';
+                crime_data_table += '</tr>';
+            } else if (crime_data[incident].crime === 'ASSAULT/RAPE' && document.getElementById('assault').checked === true) {
                 icon_url = 'assault_icon';
                 set_marker(lat, long, icon_url);
                 assault_total += 1;
@@ -382,7 +473,7 @@ function initialize_map(start, end) {
                 crime_data_table += '<td>' + lowercase_letters(crime_data[incident].location) + '</td>';
                 crime_data_table += '<td>' + lowercase_letters(crime_data[incident].disposition) + '</td>';
                 crime_data_table += '</tr>';
-            } else if (crime_data[incident].crime === 'BURGLARY IN PROGRESS/JUST' && document.getElementById('burglary_box').checked === true) {
+            } else if (crime_data[incident].crime === 'BURGLARY IN PROGRESS/JUST' && document.getElementById('burglary_box').checked === true || crime_data[incident].crime === 'BURGLARY IN PROGRESS/' && document.getElementById('burglary_box').checked === true || crime_data[incident].crime === 'BURGLARY IN PROGRESS' && document.getElementById('burglary_box').checked === true || crime_data[incident].crime === 'BURGLARY IN' && document.getElementById('burglary_box').checked === true) {
                 icon_url = 'burglary_icon';
                 set_marker(lat, long, icon_url);
                 burglary_total += 1;
@@ -400,7 +491,6 @@ function initialize_map(start, end) {
             }
         }
     }
-    
     // Add to map
     map.addLayer(layers_group);
 	
@@ -414,7 +504,7 @@ function initialize_map(start, end) {
 	bars_html += "<td id='center_align' width='10%'><strong>";
 	bars_html += homicide_total;
 	bars_html += "</strong></td>";
-	bars_html += "<td><div class='bar-container'>";
+	bars_html += "<td width='70%'><div class='bar-container'>";
 	if (homicide_total > 0) {
 		bars_html += "<div id='homicide_bar' class='bar' style='width:";
 		bars_html += homicide_total / total_total * 100;
@@ -427,7 +517,7 @@ function initialize_map(start, end) {
 	bars_html += "<td id='center_align' width='10%'><strong>";
 	bars_html += shooting_total;
 	bars_html += "</strong></td>";
-	bars_html += "<td><div class='bar-container'>";
+	bars_html += "<td width='70%'><div class='bar-container'>";
 	if (shooting_total > 0) {
 		bars_html += "<div id='shooting_bar' class='bar' style='width:";
 		bars_html += shooting_total / total_total * 100;
@@ -436,11 +526,11 @@ function initialize_map(start, end) {
 	bars_html += "</div>";
 	bars_html += "</td></tr>";
 	
-	bars_html += "<tr><td width='20%'>Weapons violation</td>"
+	bars_html += "<tr><td width='20%'>Weapons/ Stabbing</td>"
 	bars_html += "<td id='center_align' width='10%'><strong>";
 	bars_html += weapons_violations_total;
 	bars_html += "</strong></td>";
-	bars_html += "<td><div class='bar-container'>";
+	bars_html += "<td width='70%'><div class='bar-container'>";
 	if (weapons_violations_total > 0) {
 		bars_html += "<div id='weapons_bar' class='bar' style='width:";
 		bars_html += weapons_violations_total / total_total * 100;
@@ -453,7 +543,7 @@ function initialize_map(start, end) {
 	bars_html += "<td id='center_align' width='10%'><strong>";
 	bars_html += robbery_total;
 	bars_html += "</strong></td>";
-	bars_html += "<td><div class='bar-container'>";
+	bars_html += "<td width='70%'><div class='bar-container'>";
 	if (robbery_total > 0) {
 		bars_html += "<div id='robbery_bar' class='bar' style='width:";
 		bars_html += robbery_total / total_total * 100;
@@ -466,7 +556,7 @@ function initialize_map(start, end) {
 	bars_html += "<td id='center_align' width='10%'><strong>";
 	bars_html += assault_total;
 	bars_html += "</strong></td>";
-	bars_html += "<td><div class='bar-container'>";
+	bars_html += "<td width='70%'><div class='bar-container'>";
 	if (assault_total > 0) {
 		bars_html += "<div id='assault_bar' class='bar' style='width:";
 		bars_html += assault_total / total_total * 100;
@@ -479,7 +569,7 @@ function initialize_map(start, end) {
 	bars_html += "<td id='center_align' width='10%'><strong>";
 	bars_html += hit_and_run_total;
 	bars_html += "</strong></td>";
-	bars_html += "<td><div class='bar-container'>";
+	bars_html += "<td width='70%'><div class='bar-container'>";
 	if (hit_and_run_total > 0) {
 		bars_html += "<div id='hit_and_run_bar' class='bar' style='width:";
 		bars_html += hit_and_run_total / total_total * 100;
@@ -492,7 +582,7 @@ function initialize_map(start, end) {
 	bars_html += "<td id='center_align' width='10%'><strong>";
 	bars_html += burglary_total;
 	bars_html += "</strong></td>";
-	bars_html += "<td><div class='bar-container'>";
+	bars_html += "<td width='70%'><div class='bar-container'>";
 	if (burglary_total > 0) {
 		bars_html += "<div id='burglary_bar' class='bar' style='width:";
 		bars_html += burglary_total / total_total * 100;
@@ -502,36 +592,95 @@ function initialize_map(start, end) {
 	bars_html += "</td></tr>";
 	bars_html += "</table>";
 	
-    $('#bar_chart').html(bars_html);
-
-    
-    //This counter will determine if this is our second time 
+	// We'll load up the bar chart for desktops, mobile phones and tablets
+	$('#bar_chart').html(bars_html);
+	
+	// This counter will determine if this is our second time 
     // Or later through the slider method
     // If it is, we will destroy the old table
     // Set the HTML to the new table info
     // And call our start_table function to make it a datatable
-    if (count_initialize_map > 1) {
-        $('#crime_table').dataTable().fnDestroy();
+	if (count_initialize_map > 1) {
+		$('#crime_table').dataTable().fnDestroy();
 		$('#crime_table_tbody').html(crime_data_table);
 		start_table();
-    // If it's our first time through, we just need to set up the HTML
-    // And then make it a datatable
+	// If it's our first time through, we just need to set up the HTML
+	// And then make it a datatable
 	} else {
 		$('#crime_table_tbody').html(crime_data_table);
 		start_table();
-    }
-}
+	}
+	// }
+};
 
 // This makes our table a datatable
 // Which gives us interactive component
 function start_table() {
-	$('#crime_table').dataTable( {
-		"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+	$('#crime_table').dataTable({
 		"sPaginationType": "bootstrap",
 		"sScrollY": "425px",
-        "bScrollCollapse": true,
 		"oLanguage": {
 			"sLengthMenu": "_MENU_ records per page"
 		}
-	} );
-}
+	});
+};
+
+// Geocodify
+var maxY = 42.603642;
+var minY = 42.376807;
+var minX = -92.557068;
+var maxX = -92.184906;
+
+var searchMarker;
+
+var searchIcon = L.Icon.extend({
+    options: {
+        iconUrl: "http://wcfcourier.com/app/crime_map/leaflet/images/marker-icon.png",
+        iconSize: new L.Point(16, 27),
+        iconAnchor: new L.Point(8, 13),
+        shadowSize: new L.Point(25, 32),
+        popupAnchor: new L.Point(0, 5)
+    }
+});
+
+$("#geocoder").geocodify({
+    onSelect: function (result) { 
+        // Extract the location from the geocoder result
+        var location = result.geometry.location;
+        // Center the map on the result
+        map.setView(new L.LatLng(location.lat(), location.lng()), 15);
+        // Remove marker if one is already on map
+        if (searchMarker) {
+            map.removeLayer(searchMarker);
+        }
+        // Create marker
+        searchMarker = L.marker([location.lat(), location.lng()], {
+            clickable: false,
+            icon: new searchIcon()
+        });
+        // Add marker to the map
+        searchMarker.addTo(map)
+    },
+    initialText: "Enter an address",
+    regionBias: 'US',
+    // Lat, long information for Cedar Valley enter here
+    viewportBias: new google.maps.LatLngBounds(
+        new google.maps.LatLng(42.376807,-92.557068),
+        new google.maps.LatLng(42.603642,-92.184906)
+    ),
+    width: 300,
+    height: 26,
+    fontSize: '14px',
+    filterResults: function(results) {
+        var filteredResults =[];
+        $.each(results, function(i,val) {
+            var location = val.geometry.location;
+            if (location.lat() > minY && location.lat() < maxY) {
+                if (location.lng() > minX && location.lng() < maxX) {
+                    filteredResults.push(val);
+                }
+            }
+        });
+        return filteredResults;
+    }
+});
