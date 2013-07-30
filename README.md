@@ -5,8 +5,9 @@ Maps: Crimes reported in the Cedar Valley
 - This is the code that runs our crime maps. We map certain calls for service for both Waterloo and Cedar Falls, Iowa.
 
 The short of how this app works:
+
 1. I get a list of calls for service in PDF form from our local police departments every day.
-- Note: Here's the PDF from [Waterloo](http://www.waterloopolice.com/images/crpress.PDF). And here's one from [Cedar Falls](http://www.cedarfalls.com/Archive.aspx?AMID=82&Type=Recent)
+Note: Here's the PDF from [Waterloo](http://www.waterloopolice.com/images/crpress.PDF). And here's one from [Cedar Falls](http://www.cedarfalls.com/Archive.aspx?AMID=82&Type=Recent)
 2. I turn those into HTML files using [PDFtoText](http://en.wikipedia.org/wiki/Pdftotext) 
 3. I then use [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/) to pull out the calls we want and compile a spreadsheet with those calls. More information on which calls we use on the is available in my blog post below.
 - Note: These actions are all ran on the command line. So I put all of these commands in an AppleScript file to help simply the process.
