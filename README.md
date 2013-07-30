@@ -10,7 +10,7 @@ The short of how this app works:
 Note: Here's the PDF from [Waterloo](http://www.waterloopolice.com/images/crpress.PDF). And here's one from [Cedar Falls](http://www.cedarfalls.com/Archive.aspx?AMID=82&Type=Recent)
 2. I turn those into HTML files using [PDFtoText](http://en.wikipedia.org/wiki/Pdftotext) 
 3. I then use [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/) to pull out the calls we want and compile a spreadsheet with those calls. More information on which calls we use on the is available in my blog post below.
-- Note: These actions are all ran on the command line. So I put all of these commands in an AppleScript file to help simply the process.
+4. These actions (steps 1 through 3) are all ran on the command line. So I put all of these commands in an AppleScript file to help simply the process.
 5. I then add those calls to our Google spreadsheets for [Waterloo](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFcwTXJPTTFUaEoxMTN6QjYyUDlILUE#gid=18) and [Cedar Falls](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dEgxVXZGVHN1aUdwVVNJN1dJeVY5cUE)
 6. I then use [this website](http://gmaps-samples.googlecode.com/svn/trunk/spreadsheetsgeocoder/geocodespreadsheet.htm) to get the latitude and longitude values from the addresses for each call we want to map.
 7. Finally, I convert these spreadsheets into JSON using [Mr. Data Converter](http://shancarter.github.io/mr-data-converter/)
