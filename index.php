@@ -6,7 +6,27 @@ $forceTabOpen = 'home';
 $sidebar = 'false'; # uncomment to hide sidebar
 ?>
 
+
 <?php include($_SERVER['DOCUMENT_ROOT'].'/app/header.php'); ?>
+
+<meta name="description" content="This map displays crimes reported in Waterloo, Iowa and Cedar Falls, Iowa." />
+<meta name="keywords" content="Waterloo,Cedar Falls,Iowa,crime,Courier" />
+
+<!-- Facebook meta tags-->
+<meta property="og:title" content="WCFCourier.com | Crimes reported in the Cedar Valley" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="wcfcourier.com" />
+<meta property="og:image" content="http://wcfcourier.com/app/special/facebookcourierlogo.jpg" />
+<meta property="og:description" content="These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa." />
+<meta property="og:site_name" content="WCFCourier"/>
+
+<!-- Twitter meta tags -->
+<meta property="twitter:site" content="@WCFCourier">
+<meta property="twitter:card" content="These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa.">
+<meta property="twitter:url" content="wcfcourier.com/app/crime_map/">
+<meta property="twitter:title" content="Crimes reported in the Cedar Valley">
+<meta property="twitter:description" content="These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa.">
+<meta property="twitter:image" content="http://wcfcourier.com/app/special/facebookcourierlogo.jpg">
 
 <script type="text/javascript">
 <!--
@@ -137,8 +157,14 @@ hr {
 				<g:plusone size="medium"></g:plusone>
 			</li><li>
 				<div id="fb-root"></div>
-				<script src="http://connect.facebook.net/en_US/all.js#appId=161694630579757&amp;xfbml=1"></script>
-	            <fb:like href="" send="false" layout="button_count" width="90" show_faces="false" font=""></fb:like>
+            	<script>(function(d, s, id) {
+                	var js, fjs = d.getElementsByTagName(s)[0];
+                	if (d.getElementById(id)) return;
+                	js = d.createElement(s); js.id = id;
+                	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=148866255208434";
+                	fjs.parentNode.insertBefore(js, fjs);
+            	}(document, 'script', 'facebook-jssdk'));</script>
+            	<div class="fb-like" data-href="http://wcfcourier.com/app/crime_map/index.php" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
 			</li></ul>
 		</div>
 	</div>

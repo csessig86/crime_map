@@ -480,8 +480,6 @@ L.MarkerClusterGroup = L.FeatureGroup.extend({
 	//Default functionality
 	_defaultIconCreateFunction: function (cluster) {
 		var childCount = cluster.getChildCount();
-		console.log(childCount);
-
 		var c = ' marker-cluster-';
 		c += cluster._group.options.typeofCrime;
 

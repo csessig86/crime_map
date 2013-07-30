@@ -3,15 +3,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WCFCourier.com | Crimes reported in Waterloo, Iowa</title>
 
-<meta name="description" content="" />
-<meta name="keywords" content="" />
+<link rel="shortcut icon" type="image/x-icon" href="http://wcfcourier.com/icon.ico" />
+<meta name="description" content="This map displays crimes reported in Waterloo, Iowa" />
+<meta name="keywords" content="Waterloo,Cedar Falls,Iowa,crime,Courier" />
 <meta name="author" content="Lee Enterprises" />
-<meta property="og:title" content="WCFCourier.com | Crimes reported in Waterloo, Iowa" />
+
+<!-- Mobile meta tags-->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="http://wcfcourier.com/app/special/facebookcourierlogo.jpg"/>
+<meta http-equiv="cleartype" content="on">
+
+<!-- Facebook meta tags-->
+<meta property="og:title" content="WCFCourier.com | Crimes reported in Waterloo" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="wcfcourier.com" />
-<meta property="og:image" content="http://www.wcfcourier.com/app/images/site-logo.png" />
-<meta property="fb:app_id" content="125197567518585" />
-<link rel="shortcut icon" type="image/x-icon" href="http://wcfcourier.com/icon.ico" />
+<meta property="og:image" content="http://wcfcourier.com/app/special/facebookcourierlogo.jpg" />
+<meta property="og:description" content="This map displays crimes reported in Waterloo, Iowa." />
+<meta property="og:site_name" content="WCFCourier"/>
+
+<!-- Twitter meta tags -->
+<meta property="twitter:site" content="@WCFCourier">
+<meta property="twitter:card" content="These maps display crimes reported in Waterloo, Iowa.">
+<meta property="twitter:url" content="wcfcourier.com/app/crime_map/">
+<meta property="twitter:title" content="Crimes reported in Waterloo">
+<meta property="twitter:description" content="This map displays crimes reported in Waterloo, Iowa.">
+<meta property="twitter:image" content="http://wcfcourier.com/app/special/facebookcourierlogo.jpg">
+
 
 <script src="js/jquery.js"></script>
 <script type="text/javascript" src="http://wcfcourier.com/app/special/grassley_sweeney/bootstrap/js/bootstrap-dropdown.js"></script>
@@ -158,8 +179,14 @@ hr {
 				<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></td>
 				<td><g:plusone size="medium"></g:plusone></td>
 				<td><div id="fb-root"></div>
-				<script src="http://connect.facebook.net/en_US/all.js#appId=161694630579757&amp;xfbml=1"></script>
-            	<fb:like href="" send="false" layout="button_count" width="90" show_faces="false" font=""></fb:like></td>
+                    <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=148866255208434";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                    <div class="fb-like" data-href="http://wcfcourier.com/app/crime_map/index_mobile_wloo.php" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div></td>
             </tr>
         </table>
 	</div>
