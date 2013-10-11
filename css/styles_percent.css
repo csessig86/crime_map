@@ -161,12 +161,16 @@ td {
 	background-color: #FCBBA1;
 	border-right: 1px solid #252525;
 }
-#hit_and_run_bar {
-	background-color: #54278F;
+#burglary_bar {
+	background-color: #6A51A3;
 	border-right: 1px solid #252525;
 }
-#burglary_bar {
-	background-color: #807DBA;
+#theft_bar {
+	background-color: #9E9AC8;
+	border-right: 1px solid #252525;
+}
+#arson_bar {
+	background-color: #CBC9E2;
 	border-right: 1px solid #252525;
 }
 #center_align {

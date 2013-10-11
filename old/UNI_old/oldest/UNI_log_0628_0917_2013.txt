@@ -1,0 +1,100 @@
+13-240          Vandalism            Jennings Dr         06/28/2013 1753       06/28/2013 1753                       Closed
+13-241          Harassment           G St                06/28/2013 1946       08/01/11 1200 - 06/28/2013 1900       Open
+13-242          Fire                 Campbell Hall       06/28/2013 2157       06/28/2013 2157                       Closed
+13-243          Drug Law Violation   Soccer Field        06/29/2013 2003       06/29/2013 2003                       Closed
+13-244          Vandalism            Commons             06/30/2013 1821       06/30/2013 1821                       Open
+                Court Order
+13-245          Violation - Assist   Off Campus          07/01/2013 1155       05/27/2013 - 6/30/2013                Closed
+13-246          Vandalism            Sabin Bike Rack     07/01/2013 1420       06/19/2013 0900 - 06/19/2013 1700     Open
+13-247          Warrant - Assist     G St                07/02/2013 0740       07/02/2013 0740                       Closed
+13-248          Traffic Criminal     Off Campus          07/04/2013 0117       07/04/2013 0117                       Closed
+13-250          Theft                Rod Library         07/08/2013 1409       05/30/2013 1100 - 05/30/2013 1130     Open
+13-251          Traffic Criminal     Off Campus          07/08/2013 2141       07/08/2013 2141                       Closed
+13-253          Vandalism            23rd / College St   07/10/2013 1623       07/10/2013 1623                       Open
+                                     Strayer Wood
+13-254          Theft                Theater             07/12/2013 1806       07/12/2013 1500 - 07/12/2013 1800     Open
+                Weapon Violation -
+13-255          Assist               Off Campus          07/12/2013 2020       07/12/2013 2020                       Unfounded
+                                     Center for
+                                     Educational
+13-258          Vandalism            Technology          07/16/2013 1557       07/16/2013 1557                       Open
+13-259          Liquor Law Violation Off Campus          07/18/2012 0054       07/18/2013 0054                       Closed
+13-260          Warrant - Assist     G St                07/18/2013 2114       07/18/2013 2114                       Open
+13-261          Harassment           ITC                 07/19/2013 1012       07/18/2013 1012                       Unfounded
+13-262          Theft                Jennings Dr         07/19/2013 2013       03/11/2013 1300 - 05/31/2013 1500     Closed
+13-264          Fire                 McLeod Center       07/21/2013 1222       07/21/2013 1222                       Closed
+                Traffic Criminal -
+13-265          Assist               Off Campus          07/26/2013 2055       07/26/2013 2055                       Closed
+13-266          Theft                Roth                07/21/2013 1951       07/20/2013 1500 - 07/30/20131800      Open
+13-267          Theft                Rod Library         07/24/2013 1840       07/24/2013 1650 - 0724/2013 1850      Open
+13-269          Trespass             Price Lab School    07/26/2013 1502       07/26/2013 1457 - 07/26/2013 1502     Open
+13-270          Liquor Law Violation Maucker Union       07/28/2013 0115       07/28/2013 0115                       Closed
+13-272          Vandalism            23rd and College    07/28/2013 2031       07/28/2013 2031                       Open
+                                     McCollum Science
+13-273          Fire                 Hall                07/29/2013 1234       07/29/2013 1234                       Closed
+13-274          Theft                Wellness Rec        07/30/2013 1327       07/30/2013 1327                       Open
+13-277          Fire                 1233 22nd           08/01/2013 2002       07/31/2013 1200 - 08/01/2012 2002     Closed
+13-278          Traffic Criminal     Off Campus          08/03/2013 0200       08/03/2013 0200                       Closed
+                                     Student Health
+13-279          Vandalism            Center              08/04/2013 2016       08/04/2013 2016                       Open
+13-281          Liquor Law Violation Off Campus          08/08/2013 0159       08/08/2013 0159                       Closed
+                Trespass, Liquor
+                Law Violation -
+13-283          Assist               Off Campus          08/11/2013 0116       08/11/2013 0116                       Closed
+13-284          Vandalism            Campbell Hall       08/14/2013 0950       08/14/2013 0950                       Open
+13-288          Theft                Towers CP Lot       08/21/2013 1405       08/13/2013 1600 - 08/21/2013 1405     Open
+13-289          Liquor Law Violation Maucker Union       08/22/13 0159         08/22/2013 0159                       Closed
+13-290          Warrant - Assist     Off Campus          08/22/2013 1327       08/22/2013 1327                       Closed
+13-291          Fire                 Gil G lot           08/22/2013 1916       08/22/2013 1916                       Unfounded
+                Court Order
+13-293          Violation            Gilchrist           08/22/2013 2108       08/22/2013 2108                       Open
+13-294          Liquor Law Violation Off Campus          08/23/2013 2348       08/23/2013 2348                       Closed
+13-295          Liquor Law Violation Redeker             08/24/2013 0107       08/24/2013 0107                       Closed
+13-296          Liquor Law Violation Off Campus          08/24/2013 0233       08/24/2013 0233                       Closed
+13-298          Solicitation         Campbell Hall       08/24/2013 1613       08/24/2013 1613                       Closed
+13-299          Liquor Law Violation Wellness Rec        08/24/2013 0124       08/24/2013 0124                       Closed
+                Liquor Law Violation
+13-300          and Disorderly       Maucker Union       08/24/2013 0123       08/24/2013 0123                       Closed
+13-302          Burglary             Campbell Hall       08/24/2013 1530       08/24/2013 1530                       Open
+13-303          Vandalism            South Art Lot       08/26/2013 1037       08/26/2013 1037                       Open
+13-304          Theft                Bender Hall         08/26/2013 1551       08/24/2013 1200 - 08/26/2013 1551     Open
+13-305          Trespass             Campbell Hall       08/26/2013 2318       08/26/2013 2318                       Closed
+13-306          Theft                Panther Village     08/27/2013 1058       08/27/2013 1058                       Open
+                                     Innovative Teaching
+                                     and Technology
+13-308          Theft                Cntr                  08/27/2013 1938       08/27/2013 1600-1900                 Open
+13-310          Assault                Dancer Hall           08/27/2013 2300       08/27/2013 2300                      Open
+13-312          Vandalism              Campbell Hall         08/28/13 1323         08/28/2013 1323                      Open
+13-313          Harassment             Bender Hall           08/28/2013 1945       08/28/2013 1945                      Open
+13-314          Theft                  Lang Hall             08/29/2013 1945       08/28/2013 1400 - 08/28/2013 1515    Open
+13-315          Theft                  1200 Block 22nd St    08/29/2013 1121       08/28/2013 2100 - 08/29/2013 1100    Open
+13-316          Fraud                  Gilchrist Hall        08/29/2013 1347       08/29/2013 1347 - 08/29/2013 1403    Open
+                Child Pornography -                                                                                     Closed-Referred to
+13-282          Assist                 Hillside Courts       08/08/2013 1220       05/12/2013 1200 - 06/08/2013 1200    CFPD
+13-318          Liquor Law Violation   Campbell Hall         08/30/2013 0002       08/30/2013 0002                      Closed
+13-320          Fraud                  Gilchrist Hall        08/30/2013 1630       08/30/2013 1550 - 08/30/2013 1628    Open
+13-322          Vandalism              Gilchrist A Lot       08/31/2013 2002       08/29/2013 1400 - 08/31/2013 1000    Open
+                Traffic Criminal -
+13-323          Assist                 Off Campus            08/31/2013 2136       08/31/2013 2136                      Open
+13-330          Liquor Law Violation   Off Campus            09/04/2013 2301       09/04/2013 2301                      Closed
+13-331          Harassment             Hagemann Hall         09/04/2013 2344       09/04/2013 2344                      Closed
+13-332          Assault - Assist       Off Campus            09/05/2013 1350       09/05/2013 1350                      Closed
+13-334          Theft                  Bender hall           09/06/2013 1404       09/06/2013 1100 - 1400               Open
+13-335          Liquor Law Violation   Off Campus            09/07/2013 0051       09/07/2013 0051                      Closed
+13-336          Liquor Law Violation Price Lab South Lot   09/07/2013 0115       09/07/2013 0115                      Closed
+13-338          Incendiary Device      Redeker               09/08/2013 0020       09/08/2013 0020                      Open
+13-340          Robbery - Assist       Off Campus            09/08/2013 0244       09/08/2013 0244                      Closed
+13-341          Harassment             Shull Hall            09/08/2013 0344       09/08/2013 0344                      Closed
+13-342          Harassment             Dancer Hall           09/08/2013 1723       09/08/2013 1134 - 1158               Open
+13-344          Theft                  Dancer Hall           09/09/2013 0906       09/07/2013 1000 - 09/08/2013 1700    Closed
+13-346          Theft                  Dancer Hall           09/09/2013 1156       09/06/2013 1530 - 09/08/2013 1015    Open
+13-349          Assault                Dancer Hall           09/10/2013 1825       09/10/2013 1720 - 09/10/2013 1745    Open
+13-350          Warrant - Assist     Schindler Ed Center   09/11/2013 0922       09/11/2013 0922                      Closed
+                Court Order
+13-351          Violation              Gilchrist Hall        09/11/2013 1227       09/11/2013 1227                      Open
+13-352          Assault                Dancer Hall           09/12/2013 1538       09/09/2013 2130                      Open
+13-355          Traffic Criminal       Off Campus            09/12/2013 2344       09/12/2013 2344                      Closed
+                Sexual
+13-360          Assault/Burglary       Roth                  09/15/2013 1021       09/15/2013 0230 - 09/15/2013 0900    Open
+                Court Order
+13-361          Violation              Gilchrist             09/17/2013 1104       09/17/2013 1100                      Open

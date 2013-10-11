@@ -1,7 +1,7 @@
 <?php
 $title = 'WCFCourier.com | Map: Crimes reported in Cedar Falls, Iowa';
 $pageKeywords = '';
-$pageDescription = '';
+$pageDescription = 'These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa.';
 $forceTabOpen = 'home';
 $sidebar = 'false'; # uncomment to hide sidebar
 ?>
@@ -190,20 +190,21 @@ hr {
 <table id="intro_table">
 	<tr>
 		<td width="90%">
-		<p>These maps display crimes reported in Cedar Falls, Iowa, since the beginning of the year. The information is gathered from the Cedar Falls Police Department, which keeps a <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">log of calls for service</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected seven categories of reports to map.</p>
+		<p>These maps display crimes reported in Cedar Falls, Iowa, since the beginning of the year. The information is gathered from the <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a> and the <a href="http://www.vpaf.uni.edu/pubsaf/crime_stats/log/index.shtml" target="_blank">UNI Police Department</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected eight categories of reports to map.</p>
 		<p>The map is color coded depending on the type of call. Click on the markers on the map for more information on the call. Select a month below to filter the number of reported crimes that are pinpointed on the map.</p>
+        <p><strong>Update (10/10):</strong> We added reports from the UNI PD to the map. As a result, the types of crimes we selected to map has changed to keep data across police departments consistent. We removed reports of hit and runs and added theft and arson reports to all maps.</p>
         <p>For the mobile/tablet version of this app, <a href="index_mobile_cf.php">click here</a>. For a crime map for the city of Waterloo, <a href="index_wloo.php">click here</a>.</p>
 		</td>
 		<td width="10%"><div id="last_updated"></div></td>
 	</tr>
 </table>
 
-<iframe class="map_embed" height="1600" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/cf/map_index_july.php'></iframe>
+<iframe class="map_embed" height="1700" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/cf/map_index_oct.php'></iframe>
 
 </div>
 
 <div id="credits">
-	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	Data provided by: <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a>
+	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	To view the data, <a href="https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dDRYWUdUNEg3QXB0UG42ZE9TNXZCTnc" target="_blank">click here</a>.
     <br />
     * Note: For best results, use a browser other than Internet Explorer.</p>
 

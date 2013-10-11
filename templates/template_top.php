@@ -34,7 +34,7 @@
     
     <link rel="stylesheet" type="text/css" href="http://wcfcourier.com/app/crime_map/css/styles_percent.css">
     
-	<script src="http://wcfcourier.com/app/crime_map/leaflet/leaflet_05.js"></script>
+	<script src="http://wcfcourier.com/app/crime_map/leaflet/leaflet.js"></script>
     <script src="http://wcfcourier.com/app/crime_map/leaflet/leaflet.markercluster-src.js"></script>
     
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>

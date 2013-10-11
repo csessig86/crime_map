@@ -6,9 +6,9 @@ import re
 # http://www.waterloopolice.com/images/crpress.PDF
 
 # Create a CSV where we'll save our data.
-f = open('csv/todays_crime_data.csv', 'w')
+f = open('csv/todays_crime_data_wloo.csv', 'w')
 # Add headers
-f.write("date" + "," + "times" "," + "crime" + "," + "location" + "," + "disposition" + "\n")
+f.write("date" + "," + "times" "," + "crime" + "," + "location" + "," + "disposition" + "," + "location_geo" + "," + "\n")
 
 # Use PDFtoHTML to convert into HTML
 # For Mac users, go to command line and type: brew install pdftohtml
@@ -23,7 +23,7 @@ soup = BeautifulSoup(page)
 # PDFtoHTML gives us several pages of crimes
 # Depending on how many crimes were reported
 # So we create a for loop to go through each one
-for x in range(10, 86):
+for x in range(50, 175):
     
     # This prints on the command line
     report_page = str(x)
@@ -59,9 +59,9 @@ for x in range(10, 86):
     # We'll first find all the date divs
     for post in new_soup.find_all(attrs={'style' : date_regex_css}):
         if date_regex.match(post.get_text()):
-            if post.find_previous('div').get_text() == 'MVA HIT & RUN' or post.find_previous('div').get_text() == 'BURGLARY' or post.find_previous('div').get_text() == 'BURGLARY IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'ROBBERY' or post.find_previous('div').get_text() == 'ROBBERY IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'ASSAULT' or post.find_previous('div').get_text() == 'ASSAULT/AMBULANCE REQUESTED' or post.find_previous('div').get_text() == 'ASSAULT IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'WEAPONS VIOLATIONS' or post.find_previous('div').get_text() == 'STABBING IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'SHOOTING IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'HOMICIDE' or post.find_previous('div').get_text() == 'WEAPON:SHOTS FIRED':
+            if post.find_previous('div').get_text() == 'LARCENY/THEFT/SHOPLIFTING' or post.find_previous('div').get_text() == 'LARCENY IN PROGRESS' or post.find_previous('div').get_text() == 'ARSON' or post.find_previous('div').get_text() == 'BURGLARY' or post.find_previous('div').get_text() == 'BURGLARY IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'ROBBERY' or post.find_previous('div').get_text() == 'ROBBERY IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'ASSAULT' or post.find_previous('div').get_text() == 'ASSAULT/AMBULANCE REQUESTED' or post.find_previous('div').get_text() == 'ASSAULT IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'ASSAULT/RAPE' or post.find_previous('div').get_text() == 'WEAPONS VIOLATIONS' or post.find_previous('div').get_text() == 'STABBING IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'SHOOTING IN PROGRESS/JUST' or post.find_previous('div').get_text() == 'HOMICIDE' or post.find_previous('div').get_text() == 'WEAPON:SHOTS FIRED':
                 # Then we'll see if a report was filed on the call
-                if post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'NO REPORT' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'NOTHING FOUND' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'GONE ON ARRIVAL' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'DUPLICATE CALL' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'UNFOUNDED' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'CALL CANCELLED' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'NOT NEEDED':
+                if post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'NO REPORT' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'NOTHING FOUND' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'GONE ON ARRIVAL' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'DUPLICATE CALL' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'UNFOUNDED' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'CALL CANCELLED' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'NOT NEEDED' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'CIVIL PROBLEM' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'EMPLOYEE ERROR' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'FALSE ALARM' and post.find_previous(attrs={'style' : disposition_regex_css}).get_text() != 'TEST':
                     # Finally, we'll append the call
                     # If it matches all the criteria above
                     dates.append(post.get_text())
@@ -80,13 +80,13 @@ for x in range(10, 86):
         new_date2 = new_date1[0].replace(",", " -")
         new_time = new_date1[1].replace(",", " -")
         new_crime = crime[x].replace(",", " -")
-        new_location = location[x].replace(",", " -")
-        location_sub = re.sub(" 'WPD FRCT", "", location[x])
-        location_sub2 = re.sub("/", " and", location[x])
-        new_disposition = disposition[x].replace(",", " -")
-                
+        new_location = location[x].replace(",", " -").replace("/", " and").replace(" '", "'")
+        new_location1 = new_location.split("'")
+
+        new_disposition = disposition[x].replace(",", " -").replace("Disposition", "UNKNOWN")
+        
         # Write content to the CSV
-        f.write(new_date2 + "," + new_time + "," + new_crime + "," + location_sub2 + "," + new_disposition + "\n")
+        f.write(new_date2 + "," + new_time + "," + new_crime + "," + new_location1[0] + "," + new_disposition + "," + new_location1[0] + " Waterloo Iowa" + "\n")
     
 # Always a good idea to close!
 f.close()

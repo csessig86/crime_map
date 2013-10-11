@@ -54,21 +54,30 @@
             </table>
             <p class="font_georgia"><strong>Property crimes</strong></p>
             <table id="legend_propertycrimes">
-                <tr><td id="legend_propertycrimes">
-                    <label class="checkbox">
-                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="mva_box" />                    
-                        <div id="mva">
-                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/mva_icon.png" />
-                        Hit and run
-                    </label>
-                </div>
-                </td></tr>
                 <tr><td>
                     <label class="checkbox">
                         <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="burglary_box" />
                         <div id="burglary" class="legend_padding_top">
                         <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/burglary_icon.png" />
                         Burglary
+                    </label>
+                </div>
+                </td></tr>
+                <tr><td id="legend_propertycrimes">
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="theft_box" />                    
+                        <div id="theft">
+                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/theft_icon.png" />
+                        Larcency / Theft / Shoplifting
+                    </label>
+                </div>
+                </td></tr>
+                <tr><td>
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="arson_box" />
+                        <div id="burglary" class="legend_padding_top">
+                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/arson_icon.png" />
+                        Arson
                     </label>
                 </div>
                 </td></tr>
@@ -105,3 +114,4 @@
 				</div>
 				<script src="http://wcfcourier.com/app/crime_map/jQRangeSlider/jQRangeSlider-min.js"></script>
 				<script src="http://wcfcourier.com/app/crime_map/jQRangeSlider/jQDateRangeSlider-min.js"></script>
+                <script>var NA = "NA"</script>

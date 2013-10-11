@@ -202,11 +202,12 @@ hr {
 	<div id="last_updated_mobile"></div>
 </div>
 
-<p>The chart below displays crimes reported in Cedar Falls, Iowa, since the beginning of the year. The information is gathered from the Cedar Falls Police Department, which keeps a <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">log of calls for service</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected seven categories of reports to map.</p>
+<p>The chart below displays crimes reported in Cedar Falls, Iowa, since the beginning of the year. The information is gathered from the <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a> and the <a href="http://www.vpaf.uni.edu/pubsaf/crime_stats/log/index.shtml" target="_blank">UNI Police Department</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected eight categories of reports to map. </p>
+<p><strong>Update (10/10):</strong> We added reports from the UNI PD to this page. As a result, the types of crimes we selected has changed to keep data across police departments consistent. We removed reports of hit and runs and added theft and arson reports.</p>
 
 <p>Select a month below to filter the number of reported crimes that are pinpointed on the map.</p>
 
-<iframe id="crime_iframe_id" name="crime_iframe" class="map_embed" height="1750" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/cf/map_index_july.php'></iframe>
+<iframe id="crime_iframe_id" name="crime_iframe" class="map_embed" height="1750" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/cf/map_index_oct.php'></iframe>
 
 </div><!-- close main_content -->
 
@@ -215,7 +216,7 @@ hr {
 </div>
 
 <div id="credits">
-	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	Data provided by: <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a>
+	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	To view the data, <a href="https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dDRYWUdUNEg3QXB0UG42ZE9TNXZCTnc" target="_blank">click here</a>.
     <br /><br />
     &copy; Copyright 2012, <a href="/" target="_blank">wcfcourier.com</a>, 100 E. 4th St. Waterloo, IA | <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy/" target="_blank">Privacy Policy</a></p>
 </div>

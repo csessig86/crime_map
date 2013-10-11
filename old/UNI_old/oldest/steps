@@ -1,0 +1,44 @@
+-
+Delete column with incident times (E)
+
+-
+Find: #NAME?
+Replace: Assist
+
+Find: =- Assist
+Replace: Assist
+
+-
+Make sure there is a blank row at the top of the spreadsheet
+
+-
+Create column between A and B
+=IF(A1 = "", TRIM(CONCATENATE(C1, " ", C2)), C2)
+
+-
+Create column between C and D
+=IF(A1="",TRIM(CONCATENATE(E1," ",E2)),E2)
+
+-
+Copy values to new sheet
+
+-
+Delete columns C and E
+
+-
+Sort A > Z and delete top, bottom
+
+- Sort by last column (status) and delete rows with "Unfounded"
+
+- Add these to a new sheet
+Assault
+Burglary
+Homicide (?)
+Robbery
+Sexual Assault
+Shooting (?)
+Shots fired (?)
+Weapons
+Weapon violation
+
+(?) - Haven't found the exact wording that the Cedar Falls PD uses

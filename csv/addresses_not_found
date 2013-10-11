@@ -1,0 +1,49 @@
+Waterloo
+With throw back a lat of:
+42.492764
+
+1. Donegal
+42.427599,-92.328372
+"lat" : "42.427599", "long" : "-92.328372"
+
+2. Unity Square Dr
+- Anything about 210 is not found. Need to change to:
+42.512088, -92.32216
+"lat" : "42.512088", "long" : "-92.32216"
+
+3. Wcf&n Dr
+Rename to:
+Wcf and N Dr
+
+42.53489,-92.3669
+"lat" : "42.53489", "long" : "-92.3669"
+
+4. Washington Lower St
+42.492402,-92.341075
+"lat":42.492402,"long":-92.341075
+
+5. Fwy = Hwy
+"lat" : "42.535127", "long" : "-92.452091"
+
+6. Center Street
+42.511167	-92.340349
+
+
+
+
+----
+
+Cedar Falls
+With throw back a lat of:
+
+42.534899
+
+
+
+----
+
+UNI
+
+=IF(C3="Off Campus","NA",IF(C3="300 F St",42.506804,IF(C3="Bender Hall",42.518351,IF(C3="Campbell Hall",42.51718,IF(C3="Dancer Hall",42.518335,IF(C3="E St",42.507286,IF(C3="G St",42.507069,IF(C3="McLeod Center",42.514089,IF(C3="Noehren Hall",42.511201,IF(C3="North Dome Lot",42.519093,IF(C3="UNI Dome",42.515762,IF(C3="UNI Dome",42.515762,IF(C3="Price Lab School",42.520818,IF(C3="Rider Hall",42.512423,IF(C3="Roth Hall",42.5082,IF(C3="Wellness Rec Center",42.51718,IF(C3="Wellness Rec Center",42.51718,IF(C3="Rod Library",42.514471,IF(C3="Towers Lot",42.519244,IF(C3="Towers Center",42.518318,IF(C3="Innovative Teaching and Technical Center",42.51552,IF(C3="Gallagher Bluedorn",42.510885,IF(C3="Communications Art Center",42.510885,IF(C3="Jennings Dr",42.50702,IF(C3="Lang Hall",42.51548,IF(C3="Lawther Hall",42.516264,IF(C3="Maucker Union",42.514872,IF(C3="Panther VIllage",42.510583,IF(C3="Parking Ramp",42.517337,IF(C3="Multimodal Transportation Center",42.517337,IF(C3="Power Plant",42.510576,IF(C3="Redeker Center",42.511991,IF(C3="Strayer Wood Theater",42.513731,IF(C3="South Art Lot",42.512656,IF(C3="Shull Hall",42.511225,IF(C3="Shull Lot",42.510837,IF(C3="Wright Hall",42.513866,IF(C3="McCollum Science Hall",42.513429,IF(C3="Price Lab South Lot",42.519722)))))))))))))))))))))))))))))))))))))))
+
+=IF(C2="Off Campus","NA",IF(C2="300 F St",-92.454326,IF(C2="Bender Hall",-92.462955,IF(C2="Campbell Hall",-92.461573,IF(C2="Dancer Hall",-92.461463,IF(C2="E St",-92.453878,IF(C2="G St",-92.455766,IF(C2="McLeod Center",-92.467203,IF(C2="Noehren Hall",-92.464398,IF(C2="North Dome Lot",-92.466962,IF(C2="UNI Dome",-92.467192,IF(C2="Price Lab School",-92.462133,IF(C2="Rider Hall",-92.462485,IF(C2="Roth Hall",-92.450855,IF(C2="Wellness Rec Center",-92.46653,IF(C2="Rod Library",-92.459536,IF(C2="Towers Lot",-92.462104,IF(C2="Towers Center",-92.462114,IF(C2="Innovative Teaching and Technical Center",-92.459224,IF(C2="Gallagher Bluedorn",-92.461005,IF(C2="Communications Art Center",-92.464664,IF(C2="Jennings Dr",-92.451394,IF(C2="Lang Hall",-92.457397,IF(C2="Lawther Hall",-92.461431,IF(C2="Maucker Union",-92.45867,IF(C2="Panther VIllage",-92.463776,IF(C2="Parking Ramp",-92.459725,IF(C2="Multimodal Transportation Center",-92.459725,IF(C2="Power Plant",-92.469714,IF(C2="Redeker Center",-92.463427,IF(C2="Strayer Wood Theater",-92.46406,IF(C2="South Art Lot",-92.4673,IF(C2="Shull Hall",-92.46281,IF(C2="Shull Lot",-92.462134,IF(C2="Wright Hall",-92.45906,IF(C2="McCollum Science Hall",-92.457865,IF(C2="Price Lab South Lot",-92.460934)))))))))))))))))))))))))))))))))))))

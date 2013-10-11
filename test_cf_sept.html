@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WCFCourier.com | Map: Crimes reported in the Cedar Valley</title>
+    
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="leaflet/leaflet.ie.css"  />
+    <style type="text/css">
+    #all-reports-tab {
+        opacity: 0;
+        filter: alpha(opacity = 0);
+        zoom: 1;
+        cursor: default;
+    }
+    #all-reports-tab a {
+        cursor: default;
+    }
+    </style>
+    <![endif]-->
+
+    <link rel="stylesheet" href="leaflet/MarkerCluster.css" />
+    <link rel="stylesheet" href="leaflet/MarkerCluster.Default.css" />
+    
+    <link rel="stylesheet" type="text/css" id="themeCSS" href="http://wcfcourier.com/app/crime_map/jQRangeSlider/css/classic.css">
+    <link rel="stylesheet" type="text/css" href="http://wcfcourier.com/app/crime_map/jQRangeSlider/demo/style.css">
+    <link rel="stylesheet" type="text/css" href="http://wcfcourier.com/app/crime_map/jQRangeSlider/demo/lib/jquery-ui/css/smoothness/jquery-ui-1.8.10.custom.css">
+    
+    <link rel="stylesheet" type="text/css" href="http://wcfcourier.com/app/crime_map/datatables/media/css/demo_page.css">
+    <link rel="stylesheet" type="text/css" href="http://wcfcourier.com/app/crime_map/datatables/media/css/demo_table.css">
+    
+    <link href="http://wcfcourier.com/app/special/grassley_sweeney/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="http://wcfcourier.com/app/crime_map/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/styles_percent.css">
+    
+    <script src="leaflet/leaflet.js"></script>
+    <script src="leaflet/leaflet.markercluster-src.js"></script>
+    
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="http://wcfcourier.com/app/crime_map/js/jquery.js"></script>
+    <script src="http://wcfcourier.com/app/crime_map/js/jquery.geocodify.0.11.min.js"></script>
+    
+    <script type="text/javascript" src="http://wcfcourier.com/app/crime_map/datatables/jquery.dataTables.js"></script>
+
+    <script src="http://wcfcourier.com/app/crime_map/jQRangeSlider/demo/lib/jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+    <script src="http://wcfcourier.com/app/crime_map/jQRangeSlider/lib/jquery.mousewheel.min.js"></script>
+    
+     <script type="text/javascript" src="http://wcfcourier.com/app/crime_map/js/bootstrap-dropdown.js"></script>
+    <script src="http://wcfcourier.com/app/crime_map/js/bootstrap-tab.js"></script>
+    <script src="http://wcfcourier.com/app/crime_map/datatables/DT_bootstrap.js"></script>
+</head><body style="padding-top: 10px; padding-bottom: 0px;">
+<script type='text/javascript' src='http://stats.townnews.com/shared-content/stats/common/tracker.js'></script>
+<script type='text/javascript'>
+<!--
+ if (typeof(TNStats_Tracker) !== 'undefined' && typeof(TNTracker) === 'undefined') { TNTracker = new TNStats_Tracker('wcfcourier.com'); TNTracker.setTrackerDomain('stats.townnews.com'); TNTracker.trackPageView(); }
+// -->
+</script>
+<div id="main_content">
+
+<div class="hidden-phone">
+<div id="nav-primary">
+    <ul class="nav nav-tabs">
+        <li id="all-reports-tab">
+            <a href="cf_all.html">All</a>
+        </li>
+        <li class="active">
+            <a href="cf_sept.html">Sept.</a>
+        </li>
+    </ul>
+</div>
+</div>
+
+<div class="visible-phone">
+    <div class="dropdown" style="padding-bottom: 20px; font-size: 14px;">
+        <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" href="#">
+            Click here toggle between months
+            <b class="caret"></b>
+        </a>
+        <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+            <li><a href="wloo_all.html">All reports of crime</a></li>
+            <li><a href="wloo_sept.html">September reports</a></li>
+        </ul>
+    </div>
+    <h2>Compare crimes: Sept. 2013</h2>
+    This chart compares how often crimes in this month were reported.
+</div>
+
+<table id="map_table">
+    <tr>
+        <td id="left_column_key">
+            <div class="hidden-phone">
+            <table id="legend_violentcrimes">
+                <h3>Types of crimes</h3>
+                <p>Select from the types of crimes below to see them plotted on the map.</p>
+                <p class="font_georgia"><strong>Violent crimes</strong></p>
+                <tr><td>
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="homicide_box" />
+                        <div id="homicide">
+                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/homicide_icon.png" />
+                        Homicide
+                    </label>
+                </div>
+                </td></tr>
+                <tr><td>
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="shooting_box" />
+                        <div id="shooting" class="legend_padding_top">
+                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/shooting_icon.png" />
+                        Shooting in progress / Shots fired
+                    </label>
+                </div>
+                </td></tr>
+                <tr><td>
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="weapons_violations" />
+                        <div id="Weapons Violations" class="legend_padding_top">
+                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/weapons_icon.png" />
+                        Weapons violations / Stabbings
+                    </label>
+                </div>
+                </td></tr>
+                <tr><td>
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="robbery" />
+                        <div id="Robbery" class="legend_padding_top">
+                            <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/robbery_icon.png" />
+                            Robbery
+                    </label>
+                </div>
+                </td></tr>
+                <tr><td>
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="assault" />
+                        <div id="Assault" class="legend_padding_top">
+                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/assault_icon.png" />
+                        Assault
+                    </label>
+                </div>
+                </td></tr>
+            </table>
+            <p class="font_georgia"><strong>Property crimes</strong></p>
+            <table id="legend_propertycrimes">
+                <tr><td>
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="burglary_box" />
+                        <div id="burglary" class="legend_padding_top">
+                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/burglary_icon.png" />
+                        Burglary
+                    </label>
+                </div>
+                </td></tr>
+                <tr><td id="legend_propertycrimes">
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="theft_box" />                    
+                        <div id="theft">
+                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/theft_icon.png" />
+                        Larcency / Theft / Shoplifting
+                    </label>
+                </div>
+                </td></tr>
+                <tr><td>
+                    <label class="checkbox">
+                        <input type="checkbox" onClick="initialize_map(start_usable[0], end_usable[0]);" checked="checked" id="arson_box" />
+                        <div id="burglary" class="legend_padding_top">
+                        <img width="20px" src="http://wcfcourier.com/app/crime_map/icons/arson_icon.png" />
+                        Arson
+                    </label>
+                </div>
+                </td></tr>
+            </table>
+            </div>
+            <div class="hidden-phone">
+                <h3>Compare crimes</h3>
+                This chart compares how often crimes plotted on the map are reported.
+            </div>
+            <div id="bar_chart"></div>
+        </td>
+        
+        <td>
+            <div class="hidden-phone">
+                <div id="geocode_box">
+                    <h3>Search for an address</h3>
+                    <table>
+                    <tr>
+                        <td>
+                        <form id="geocoder"></form>
+                        </td>
+                        <td style="padding-left: 50px;">
+                        <p>Note: A blue marker will appear on the map showing the address you entered.</p>
+                    </tr>
+                    </table>
+                </div>
+                <div id="map"></div>
+                <div id="date_slider_box">
+                    <h3>Date range</h3>
+                    Select a date range to plot the crimes on the map.
+                    <br />
+                    <br />
+                    <div id="date_slider"></div>
+                </div>
+                <script src="http://wcfcourier.com/app/crime_map/jQRangeSlider/jQRangeSlider-min.js"></script>
+                <script src="http://wcfcourier.com/app/crime_map/jQRangeSlider/jQDateRangeSlider-min.js"></script>
+                <script>var NA = "NA"</script>
+                <script src="JSON_cf/crime_data_sept.json"></script>
+
+            </div>
+            <script src="js/script_map.js"></script>
+        </td>
+    </tr>
+</table>
+
+<h2>Search through the records</h2>
+
+<table class="table table-striped table-bordered" id="crime_table" width="100%">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Crime</th>
+            <th>Location</th>
+            <th>Disposition</th>
+        </tr>
+    </thead>
+    <tbody id="crime_table_tbody">
+    </tbody>
+</table>
+
+<!--[if lte IE 8]>
+<script type="text/javascript">
+$('#all-reports-tab a').click(function(e) {
+        return false;
+    });
+</script>
+<![endif]-->
+
+</body>
+</html>

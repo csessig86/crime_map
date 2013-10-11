@@ -1,0 +1,38 @@
+URL for spreadsheet:
+https://docs.google.com/spreadsheet/pub?key=0AnJcvFE-D1LGdFl3YzlQN25SWExnNGVaRjI5RzVwRVE&single=true&gid=0&output=csv
+
+
+- Sort by last column (status) and delete rows with "Unfounded"
+
+- Add these to a new sheet
+Assault
+Burglary
+Homicide (?)
+Robbery
+Sexual Assault
+Shooting (?)
+Shots fired (?)
+Weapons
+Weapon violation
+
+(?) - Haven't found the exact wording that the Cedar Falls PD uses
+
+-
+Move date, time column to column G
+
+-
+Enter this into column for date:
+=LEFT(D2, 10)
+
+Enter this into column for time:
+=CONCATENATE(REPLACE(RIGHT(D2,4),3,0,":"), ":00")
+
+-
+Set location_geo to UNI
+
+-
+Lat information
+=IF(C2="Off Campus","NA",IF(C2="300 F St",42.506804,IF(C2="Bender Hall",42.518351,IF(C2="Campbell Hall",42.51718,IF(C2="Dancer Hall",42.518335,IF(C2="E St",42.507286,IF(C2="G St",42.507069,IF(C2="McLeod Center",42.514089,IF(C2="Noehren Hall",42.511201,IF(C2="North Dome Lot",42.519093,IF(C2="UNI Dome",42.515762,IF(C2="UNI Dome",42.515762,IF(C2="Price Lab School",42.520818,IF(C2="Rider Hall",42.512423,IF(C2="Roth Hall",42.5082,IF(C2="Wellness Rec Center",42.51718,IF(C2="Wellness Rec Center",42.51718,IF(C2="Rod Library",42.514471,IF(C2="Towers Lot",42.519244,IF(C2="Towers Center",42.518318,IF(C2="Innovative Teaching and Technical Center",42.51552,IF(C2="Gallagher Bluedorn",42.510885,IF(C2="Communications Art Center",42.510885,IF(C2="Jennings Dr",42.50702,IF(C2="Lang Hall",42.51548,IF(C2="Lawther Hall",42.516264,IF(C2="Maucker Union",42.514872,IF(C2="Panther VIllage",42.510583,IF(C2="Parking Ramp",42.517337,IF(C2="Multimodal Transportation Center",42.517337,IF(C2="Power Plant",42.510576,IF(C2="Redeker Center",42.511991,IF(C2="Strayer Wood Theater",42.513731,IF(C2="South Art Lot",42.512656,IF(C2="Shull Hall",42.511225,IF(C2="Shull Lot",42.510837,IF(C2="Wright Hall",42.513866)))))))))))))))))))))))))))))))))))))
+
+Long information
+=IF(C2="Off Campus","NA",IF(C2="300 F St",-92.454326,IF(C2="Bender Hall",-92.462955,IF(C2="Campbell Hall",-92.461573,IF(C2="Dancer Hall",-92.461463,IF(C2="E St",-92.453878,IF(C2="G St",-92.455766,IF(C2="McLeod Center",-92.467203,IF(C2="Noehren Hall",-92.464398,IF(C2="North Dome Lot",-92.466962,IF(C2="UNI Dome",-92.467192,IF(C2="Price Lab School",-92.462133,IF(C2="Rider Hall",-92.462485,IF(C2="Roth Hall",-92.450855,IF(C2="Wellness Rec Center",-92.46653,IF(C2="Rod Library",-92.459536,IF(C2="Towers Lot",-92.462104,IF(C2="Towers Center",-92.462114,IF(C2="Innovative Teaching and Technical Center",-92.459224,IF(C2="Gallagher Bluedorn",-92.461005,IF(C2="Communications Art Center",-92.464664,IF(C2="Jennings Dr",-92.451394,IF(C2="Lang Hall",-92.457397,IF(C2="Lawther Hall",-92.461431,IF(C2="Maucker Union",-92.45867,IF(C2="Panther VIllage",-92.463776,IF(C2="Parking Ramp",-92.459725,IF(C2="Multimodal Transportation Center",-92.459725,IF(C2="Power Plant",-92.469714,IF(C2="Redeker Center",-92.463427,IF(C2="Strayer Wood Theater",-92.46406,IF(C2="South Art Lot",-92.4673,IF(C2="Shull Hall",-92.46281,IF(C2="Shull Lot",-92.462134,IF(C2="Wright Hall",-92.45906)))))))))))))))))))))))))))))))))))

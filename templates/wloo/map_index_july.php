@@ -6,17 +6,17 @@
 <div id="nav-primary">
 	<ul class="nav nav-tabs">
     	<li>
-    		<a href="profile.php">Community Profile</a>
-    	</li>
-		<li id="all-reports-tab">
-    		<a href="map_index_all.php">All Reports</a>
-    	</li>
-		<li>
-    		<a href="map_index_jan.php">January</a>
-    	</li>
-		<li>
-    		<a href="map_index_feb.php">February</a>
-    	</li>
+            <a href="profile.php">Profile</a>
+        </li>
+        <li id="all-reports-tab">
+            <a href="map_index_all.php">All</a>
+        </li>
+        <li>
+            <a href="map_index_jan.php">Jan.</a>
+        </li>
+        <li>
+            <a href="map_index_feb.php">Feb.</a>
+        </li>
         <li>
             <a href="map_index_march.php">March</a>
         </li>
@@ -31,6 +31,15 @@
         </li>
         <li class="active">
             <a href="map_index_july.php">July</a>
+        </li>
+        <li>
+            <a href="map_index_aug.php">Aug.</a>
+        </li>
+        <li>
+            <a href="map_index_sept.php">Sept.</a>
+        </li>
+        <li>
+            <a href="map_index_oct.php">Oct.</a>
         </li>
     </ul>
 </div>
@@ -52,6 +61,9 @@
             <li><a href="map_index_may.php">May reports</a></li>
             <li><a href="map_index_june.php">June reports</a></li>
             <li><a href="map_index_july.php">July reports</a></li>
+            <li><a href="map_index_aug.php">August reports</a></li>
+            <li><a href="map_index_sept.php">September reports</a></li>
+            <li><a href="map_index_oct.php">October reports</a></li>
     	</ul>
 	</div>
 	<h2>Compare crimes: July 2013</h2>

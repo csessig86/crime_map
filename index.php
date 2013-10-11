@@ -1,7 +1,7 @@
 <?php
 $title = 'WCFCourier.com | Map: Crimes reported in the Cedar Valley';
 $pageKeywords = '';
-$pageDescription = '';
+$pageDescription = 'These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa.';
 $forceTabOpen = 'home';
 $sidebar = 'false'; # uncomment to hide sidebar
 ?>
