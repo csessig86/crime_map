@@ -41,6 +41,9 @@
         <li>
             <a href="map_index_oct.php">Oct.</a>
         </li>
+        <li>
+            <a href="map_index_nov.php">Nov.</a>
+        </li>
     </ul>
 </div>
 </div>
@@ -63,7 +66,8 @@
             <li><a href="map_index_july.php">July reports</a></li>
             <li><a href="map_index_aug.php">August reports</a></li>
             <li><a href="map_index_sept.php">September reports</a></li>
-            <li><a href="map_index_sept.php">October reports</a></li>
+            <li><a href="map_index_oct.php">October reports</a></li>
+            <li><a href="map_index_nov.php">November reports</a></li>
     	</ul>
 	</div>
 	<h2>Compare crimes: 2013</h2>

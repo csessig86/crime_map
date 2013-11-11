@@ -199,12 +199,12 @@ hr {
 	</tr>
 </table>
 
-<iframe class="map_embed" height="1700" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_oct.php'></iframe>
+<iframe class="map_embed" height="1700" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_nov.php'></iframe>
 
 </div>
 
 <div id="credits">
-	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	To view the data, <a href="https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dDRYWUdUNEg3QXB0UG42ZE9TNXZCTnc" target="_blank">click here</a>.
+	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	To view the data, <a href="https://docs.google.com/spreadsheet/pub?key=0As3JvOeYDO50dDRYWUdUNEg3QXB0UG42ZE9TNXZCTnc&output=html" target="_blank">click here</a>.
     <br />
     * Note: For best results, use a browser other than Internet Explorer.</p>
 

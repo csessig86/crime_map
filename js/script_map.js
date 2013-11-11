@@ -334,7 +334,7 @@ function initialize_map(start, end) {
                     layers_assault.addLayer(layer);
                 } else if (crime_formatted === 'Burglary' || crime_formatted === 'Burglary in progress' || crime_formatted === 'Burglary: Assist') {
                     layers_burglary.addLayer(layer);
-                } else if (crime_formatted === 'Larcency in progress' || crime_formatted === 'Larcency/Theft/Shoplifting' || crime_formatted === 'Theft') {
+                } else if (crime_formatted === 'Larcency in progress' || crime_formatted === 'Larcency/Theft/Shoplifting' || crime_formatted === 'Theft' || crime_formatted === 'Drug Law Violation, Theft, Forgery' || crime_formatted === 'Vandalism , Theft') {
                     layers_theft.addLayer(layer);
                 } else if (crime_formatted === 'Arson') {
                     layers_arson.addLayer(layer);
@@ -827,6 +827,52 @@ function initialize_map(start, end) {
             } else if (crime_data[incident].crime === 'Theft' && document.getElementById('theft_box').checked === true) {
                 icon_url = 'theft_icon';
                 crime_formatted = 'Theft';
+                set_marker(lat, long, icon_url, crime_formatted);
+                theft_total += 1;
+                // We'll add the crime information in the JSON file
+                // And table data
+                // To a blank variable
+                // And later add that to our DataTable
+                crime_data_table += '<tr>';
+                crime_data_table += '<td>' + crime_data[incident].date + '</td>';
+                crime_data_table += '<td>' + crime_data[incident].times2 + '</td>';
+                crime_data_table += '<td>' + crime_formatted;
+
+                if (crime_data[incident].location_geo === 'UNI') {
+                    crime_data_table += '<div style="font-size:10px;">* Report from UNI PD</div>';
+                }
+
+                crime_data_table += '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].location) + '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].disposition) + '</td>';
+                crime_data_table += '</tr>';
+
+            } else if (crime_data[incident].crime === 'Drug Law Violation, Theft, Forgery' && document.getElementById('theft_box').checked === true) {
+                icon_url = 'theft_icon';
+                crime_formatted = 'Drug Law Violation, Theft, Forgery';
+                set_marker(lat, long, icon_url, crime_formatted);
+                theft_total += 1;
+                // We'll add the crime information in the JSON file
+                // And table data
+                // To a blank variable
+                // And later add that to our DataTable
+                crime_data_table += '<tr>';
+                crime_data_table += '<td>' + crime_data[incident].date + '</td>';
+                crime_data_table += '<td>' + crime_data[incident].times2 + '</td>';
+                crime_data_table += '<td>' + crime_formatted;
+
+                if (crime_data[incident].location_geo === 'UNI') {
+                    crime_data_table += '<div style="font-size:10px;">* Report from UNI PD</div>';
+                }
+
+                crime_data_table += '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].location) + '</td>';
+                crime_data_table += '<td>' + lowercase_letters(crime_data[incident].disposition) + '</td>';
+                crime_data_table += '</tr>';
+
+            } else if (crime_data[incident].crime === 'Vandalism , Theft' && document.getElementById('theft_box').checked === true) {
+                icon_url = 'theft_icon';
+                crime_formatted = 'Vandalism , Theft';
                 set_marker(lat, long, icon_url, crime_formatted);
                 theft_total += 1;
                 // We'll add the crime information in the JSON file

@@ -4,7 +4,7 @@
 <title>WCFCourier.com | Crimes reported in the Cedar Valley</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="http://wcfcourier.com/icon.ico" />
-<meta name="description" content="This map displays crimes reported in Waterloo, Iowa and Cedar Falls, Iowa." />
+<meta name="description" content="This map displays crimes reported in Waterloo and Cedar Falls, Iowa." />
 <meta name="keywords" content="Waterloo,Cedar Falls,Iowa,crime,Courier" />
 <meta name="author" content="Lee Enterprises" />
 
@@ -22,15 +22,15 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="wcfcourier.com" />
 <meta property="og:image" content="http://wcfcourier.com/app/special/facebookcourierlogo.jpg" />
-<meta property="og:description" content="These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa." />
+<meta property="og:description" content="These maps display crimes reported in Waterloo and Cedar Falls, Iowa." />
 <meta property="og:site_name" content="WCFCourier"/>
 
 <!-- Twitter meta tags -->
 <meta property="twitter:site" content="@WCFCourier">
-<meta property="twitter:card" content="These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa.">
+<meta property="twitter:card" content="These maps display crimes reported in Waterloo and Cedar Falls, Iowa.">
 <meta property="twitter:url" content="wcfcourier.com/app/crime_map/">
 <meta property="twitter:title" content="Crimes reported in the Cedar Valley">
-<meta property="twitter:description" content="These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa.">
+<meta property="twitter:description" content="These maps display crimes reported in Waterloo and Cedar Falls, Iowa.">
 <meta property="twitter:image" content="http://wcfcourier.com/app/special/facebookcourierlogo.jpg">
 
 <script src="js/jquery.js"></script>
@@ -206,7 +206,7 @@ hr {
 
 
 <div class='hidden-phone'>
-<p>These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa. Select a map for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department and the Cedar Falls Police Department.</p>
+<p>These maps display crimes reported in Waterloo and Cedar Falls, Iowa. Select a map for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department, the Cedar Falls Police Department and the University of Northern Iowa Police Department.</p>
 
 <table id="intro_table">
 	<tr>
@@ -227,7 +227,7 @@ hr {
 </div>
 
 <div class='visible-phone'>
-<p>Select a city for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department and the Cedar Falls Police Department.</p>
+<p>Select a city for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department, the Cedar Falls Police Department and the University of Northern Iowa Police Department.</p>
 
 <a href='index_mobile_wloo.php'>
 		<h3>Waterloo</h3>
@@ -245,7 +245,7 @@ hr {
 <br />
 
 <div id="credits">
-	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	Data provided by: <a href="http://www.waterloopolice.com/images/crpress.PDF" target="_blank">Waterloo Police Department</a> and the <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a>
+	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>   |   Data provided by: <a href="http://www.waterloopolice.com/images/crpress.PDF" target="_blank">Waterloo Police Department</a>, <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a> and <a href="http://www.vpaf.uni.edu/pubsaf/" target="_blank">University of Northern Iowa Police Department</a>
     <br /><br />
     &copy; Copyright 2012, <a href="/" target="_blank">wcfcourier.com</a>, 100 E. 4th St. Waterloo, IA | <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy/" target="_blank">Privacy Policy</a></p>
 </div>

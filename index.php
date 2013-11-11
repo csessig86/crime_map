@@ -1,7 +1,7 @@
 <?php
 $title = 'WCFCourier.com | Map: Crimes reported in the Cedar Valley';
 $pageKeywords = '';
-$pageDescription = 'These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa.';
+$pageDescription = 'These maps display crimes reported in Waterloo and Cedar Falls, Iowa.';
 $forceTabOpen = 'home';
 $sidebar = 'false'; # uncomment to hide sidebar
 ?>
@@ -9,7 +9,7 @@ $sidebar = 'false'; # uncomment to hide sidebar
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/app/header.php'); ?>
 
-<meta name="description" content="This map displays crimes reported in Waterloo, Iowa and Cedar Falls, Iowa." />
+<meta name="description" content="This map displays crimes reported in Waterloo and Cedar Falls, Iowa." />
 <meta name="keywords" content="Waterloo,Cedar Falls,Iowa,crime,Courier" />
 
 <!-- Facebook meta tags-->
@@ -17,15 +17,15 @@ $sidebar = 'false'; # uncomment to hide sidebar
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="wcfcourier.com" />
 <meta property="og:image" content="http://wcfcourier.com/app/special/facebookcourierlogo.jpg" />
-<meta property="og:description" content="These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa." />
+<meta property="og:description" content="These maps display crimes reported in Waterloo and Cedar Falls, Iowa." />
 <meta property="og:site_name" content="WCFCourier"/>
 
 <!-- Twitter meta tags -->
 <meta property="twitter:site" content="@WCFCourier">
-<meta property="twitter:card" content="These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa.">
+<meta property="twitter:card" content="These maps display crimes reported in Waterloo and Cedar Falls, Iowa.">
 <meta property="twitter:url" content="wcfcourier.com/app/crime_map/">
 <meta property="twitter:title" content="Crimes reported in the Cedar Valley">
-<meta property="twitter:description" content="These maps display crimes reported in Waterloo, Iowa and Cedar Falls, Iowa.">
+<meta property="twitter:description" content="These maps display crimes reported in Waterloo and Cedar Falls, Iowa.">
 <meta property="twitter:image" content="http://wcfcourier.com/app/special/facebookcourierlogo.jpg">
 
 <script type="text/javascript">
@@ -173,7 +173,7 @@ hr {
 
 <hr>
 
-<p>These maps display crimes reported in Waterloo and Cedar Falls, Iowa. Select a map for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department and the Cedar Falls Police Department.</p>
+<p>These maps display crimes reported in Waterloo and Cedar Falls, Iowa. Select a map for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department, the Cedar Falls Police Department and the University of Northern Iowa Police Department.</p>
 
 <p>For the mobile/tablet version of this app, <a href="index_mobile.php">click here</a>. For reports from 2012, <a href="http://wcfcourier.com/app/crime_map2012/" target="_blank">click here</a>.</p>
 
@@ -200,7 +200,7 @@ hr {
 <br />
 <br />
 <div id="credits">
-	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	Data provided by: <a href="http://www.waterloopolice.com/images/crpress.PDF" target="_blank">Waterloo Police Department</a> and the <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a>
+	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	Data provided by: <a href="http://www.waterloopolice.com/images/crpress.PDF" target="_blank">Waterloo Police Department</a>, <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a> and <a href="http://www.vpaf.uni.edu/pubsaf/" target="_blank">University of Northern Iowa Police Department</a>
     <br />
     * Note: For best results, use a browser other than Internet Explorer.</p>
 </div>

@@ -51,7 +51,6 @@ var crime_data =
 {"date":"2013-09-13","times":"16:45:48","crime":"LARCENY/THEFT/SHOPLIFTING","location":"2507-4 ROYAL DR","disposition":"REPORT INITIATED","location_geo":"2507-4 ROYAL DR Cedar Falls Iowa","lat":42.5148127,"long":-92.435363},
 {"date":"2013-09-15","times":"8:19:32","crime":"BURGLARY","location":"6822 UNIVERSITY AV","disposition":"REPORT INITIATED","location_geo":"6822 UNIVERSITY AV Cedar Falls Iowa","lat":42.513173,"long":-92.4407739},
 {"date":"2013-09-15","times":"20:07:08","crime":"WEAPON:SHOTS FIRED","location":"1008 CARRIAGE LN","disposition":"REPORT INITIATED","location_geo":"1008 CARRIAGE LN Cedar Falls Iowa","lat":42.529382,"long":-92.469389},
-{"date":"2013-09-15","times":"10:21:00","crime":"Sexual Assault/Burglary","location":"Roth Hall","disposition":"Open","location_geo":"UNI","lat":42.5082,"long":-92.450855},
 {"date":"2013-09-16","times":"15:23:14","crime":"LARCENY/THEFT/SHOPLIFTING","location":"402 VIKING PLAZA DR","disposition":"REPORT INITIATED","location_geo":"402 VIKING PLAZA DR Cedar Falls Iowa","lat":42.4804486,"long":-92.4443479},
 {"date":"2013-09-17","times":"16:38:54","crime":"LARCENY/THEFT/SHOPLIFTING","location":"525 BRANDILYNN BLVD","disposition":"REPORT INITIATED","location_geo":"525 BRANDILYNN BLVD Cedar Falls Iowa","lat":42.4863799,"long":-92.440025},
 {"date":"2013-09-18","times":"20:23:38","crime":"LARCENY IN PROGRESS","location":"5911 UNIVERSITY AV","disposition":"REPORT INITIATED","location_geo":"5911 UNIVERSITY AV Cedar Falls Iowa","lat":42.5109377,"long":-92.4291703},
