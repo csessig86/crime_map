@@ -191,15 +191,13 @@ hr {
 	<tr>
 		<td width="90%">
 		<p>These maps display crimes reported in Waterloo, Iowa, since the beginning of the year. The information is gathered from the Waterloo Police Department, which keeps a <a href="http://waterloopolice.com/index.php?option=com_content&view=section&layout=blog&id=16&Itemid=31" target="_blank">log of calls for service</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected eight categories of reports to map.</p>
-		<p>The map is color coded depending on the type of call. Click on the markers on the map for more information on the call. Select a month below to filter the number of reported crimes that are pinpointed on the map.</p>
-        <p><strong>Update (10/10):</strong> We added reports from the UNI PD to the Cedar Falls map. As a result, the types of crimes we selected to map has changed to keep data across police departments consistent. We removed reports of hit and runs and added theft and arson reports to all maps.</p>
         <p>For the mobile/tablet version of this app, <a href="index_mobile_wloo.php">click here</a>. For a crime map for the city of Cedar Falls, <a href="index_cf.php">click here</a>.</p>
 		</td>
 		<td width="10%"><div id="last_updated"></div></td>
 	</tr>
 </table>
 
-<iframe class="map_embed" height="1700" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_nov.php'></iframe>
+<iframe class="map_embed" height="1700" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_review.php'></iframe>
 
 </div>
 

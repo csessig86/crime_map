@@ -1137,7 +1137,7 @@ $("#geocoder").geocodify({
         new google.maps.LatLng(42.376807,-92.557068),
         new google.maps.LatLng(42.603642,-92.184906)
     ),
-    width: 300,
+    width: 295,
     height: 26,
     fontSize: '14px',
     filterResults: function(results) {

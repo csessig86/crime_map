@@ -185,12 +185,12 @@ hr {
 	<tr>
 		<td width='50%' class='border'>
 			<a href='index_wloo.php'>
-				<img src='templates/wloo_screenshot.jpg' width='100%' />
+				<img src='templates/wloo_screenshot_new.jpg' width='100%' />
 			</a>
 		</td>
 		<td width='50%' class='border'>
 			<a href='index_cf.php'>
-				<img src='templates/cf_screenshot.jpg' width='100%' />
+				<img src='templates/cf_screenshot_new.jpg' width='100%' />
 			</a>
 		</td>
 	</tr>

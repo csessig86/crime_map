@@ -212,14 +212,14 @@ hr {
 	<tr>
 		<td width='50%'>
 			<h3>Waterloo</h3>
-			<a href='index_mobile_wloo.php'>
-				<img src='templates/wloo_screenshot.jpg' width='100%' />
+			<a href='templates/wloo/map_index_review.php'>
+				<img src='templates/wloo_screenshot_new.jpg' width='100%' />
 			</a>
 		</td>
 		<td width='50%'>
 			<h3>Cedar Falls</h3>
-			<a href='index_mobile_cf.php'>
-				<img src='templates/cf_screenshot.jpg' width='100%' />
+			<a href='templates/cf/map_index_review.php'>
+				<img src='templates/cf_screenshot_new.jpg' width='100%' />
 			</a>
 		</td>
 	</tr>
@@ -229,11 +229,11 @@ hr {
 <div class='visible-phone'>
 <p>Select a city for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department, the Cedar Falls Police Department and the University of Northern Iowa Police Department.</p>
 
-<a href='index_mobile_wloo.php'>
+<a href='templates/wloo/map_index_review.php'>
 		<h3>Waterloo</h3>
 	</a>
 	<br />
-	<a href='index_mobile_cf.php'>
+	<a href='templates/cf/map_index_review.php'>
 		<h3>Cedar Falls</h3>
 	</a>
 </div>

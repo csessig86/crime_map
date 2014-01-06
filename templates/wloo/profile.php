@@ -44,6 +44,9 @@
         <li>
             <a href="map_index_nov.php">Nov.</a>
         </li>
+        <li>
+            <a href="map_index_dec.php">Dec.</a>
+        </li>
     </ul>
 </div>
 </div>
@@ -68,13 +71,15 @@
 			<li><a href="map_index_sept.php">September reports</a></li>
 			<li><a href="map_index_oct.php">October reports</a></li>
 			<li><a href="map_index_nov.php">November reports</a></li>
+			<li><a href="map_index_dec.php">December reports</a></li>
+			<li><a href="map_index_review.php">Map: Year in review</a></li>
     	</ul>
 	</div>
 	<br />
 	<h2>Community profile</h2>
 </div>
 
-<p>This table is a community profile for the city of Waterloo, which shows population figures as well as poverty estimates.<br />
+<p><strong>About:</strong> This table is a community profile for the city of Waterloo, which shows population figures as well as poverty estimates.<br />
 All figures are provided by the <a href="http://quickfacts.census.gov/qfd/states/19/1982425.html" target="_blank">U.S. Census Bureau</a>.</p>
 
 <table class="table table-striped table-bordered" width="100%" style="overflow: auto;">

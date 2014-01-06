@@ -24,7 +24,7 @@ soup = BeautifulSoup(page)
 # PDFtoHTML gives us several pages of crimes
 # Depending on how many crimes were reported
 # So we create a for loop to go through each one
-for x in range(1, 33):
+for x in range(1, 12):
 	# This prints on the command line
 	report_page = str(x)
 	print "Getting data for page " + report_page
