@@ -203,10 +203,10 @@ hr {
 	<div id="last_updated_mobile"></div>
 </div>
 
-<p>The chart below displays crimes reported in Waterloo, Iowa, since the beginning of the year. The information is gathered from the Waterloo Police Department, which keeps a <a href="http://waterloopolice.com/index.php?option=com_content&view=section&layout=blog&id=16&Itemid=31" target="_blank">log of calls for service</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected eight categories of reports to map.</p>
-
+<p>The chart below displays crimes reported in Waterloo, Iowa, since the beginning of the year. The information is gathered from the Waterloo Police Department, which keeps a <a href="http://waterloopolice.com/index.php?option=com_content&view=section&layout=blog&id=16&Itemid=31" target="_blank">log of calls for service</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected eight categories of reports to map. Also, we do not include crimes where no report was filed by the police department.</p>
+<p><strong>Note:</strong> The numbers of crimes are not official. Reports are gathered using an automated program and may include omissions. Also, the type of crime may have changed upon further investigation from the police department.</p>
 <p>Select a month below to filter the number of reported crimes that are pinpointed on the map.</p>
-<iframe id="crime_iframe_id" name="crime_iframe" class="map_embed" height="1750" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_dec.php'></iframe>
+<iframe id="crime_iframe_id" name="crime_iframe" class="map_embed" height="1750" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_jan.php'></iframe>
 
 </div><!-- close main_content -->
 
@@ -215,9 +215,9 @@ hr {
 </div>
 
 <div id="credits">
-	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	To view the data, <a href="https://docs.google.com/spreadsheet/pub?key=0As3JvOeYDO50dDRYWUdUNEg3QXB0UG42ZE9TNXZCTnc&output=html" target="_blank">click here</a>.
+	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	To view the data, <a href="https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE10Ni01ckJXbnVNUWNzSUhPUEdrUHc&usp=sharing" target="_blank">click here</a>.
     <br /><br />
-    &copy; Copyright 2012, <a href="/" target="_blank">wcfcourier.com</a>, 100 E. 4th St. Waterloo, IA | <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy/" target="_blank">Privacy Policy</a></p>
+    &copy; Copyright 2014, <a href="/" target="_blank">wcfcourier.com</a>, 100 E. 4th St. Waterloo, IA | <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy/" target="_blank">Privacy Policy</a></p>
 </div>
 
 

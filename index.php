@@ -169,13 +169,13 @@ hr {
 		</div>
 	</div>
 	
-<h2>Crimes reported in the Cedar Valley</h2>
+<h2>Crimes reported in the Cedar Valley: 2014</h2>
 
 <hr>
 
 <p>These maps display crimes reported in Waterloo and Cedar Falls, Iowa. Select a map for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department, the Cedar Falls Police Department and the University of Northern Iowa Police Department.</p>
 
-<p>For the mobile/tablet version of this app, <a href="index_mobile.php">click here</a>. For reports from 2012, <a href="http://wcfcourier.com/app/crime_map2012/" target="_blank">click here</a>.</p>
+<p>For the mobile/tablet version of this app, <a href="index_mobile.php">click here</a>. For reports from 2013, <a href="http://wcfcourier.com/app/crime_map2013/" target="_blank">click here</a>. For partial reports from 2012, <a href="http://wcfcourier.com/app/crime_map2012/" target="_blank">click here</a>.</p>
 
 <table id="intro_table">
 	<tr>
@@ -185,12 +185,12 @@ hr {
 	<tr>
 		<td width='50%' class='border'>
 			<a href='index_wloo.php'>
-				<img src='templates/wloo_screenshot_new.jpg' width='100%' />
+				<img src='templates/wloo_screenshot.jpg' width='100%' />
 			</a>
 		</td>
 		<td width='50%' class='border'>
 			<a href='index_cf.php'>
-				<img src='templates/cf_screenshot_new.jpg' width='100%' />
+				<img src='templates/cf_screenshot.jpg' width='100%' />
 			</a>
 		</td>
 	</tr>

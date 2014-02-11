@@ -190,19 +190,20 @@ hr {
 <table id="intro_table">
 	<tr>
 		<td width="90%">
-		<p>These maps display crimes reported in Cedar Falls, Iowa, since the beginning of the year. The information is gathered from the <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a> and the <a href="http://www.vpaf.uni.edu/pubsaf/crime_stats/log/index.shtml" target="_blank">UNI Police Department</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected eight categories of reports to map.</p>
+		<p>These maps display crimes reported in Cedar Falls, Iowa, since the beginning of the year. The information is gathered from the <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a> and the <a href="http://www.vpaf.uni.edu/pubsaf/crime_stats/log/index.shtml" target="_blank">UNI Police Department</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected eight categories of reports to map. Also, we do not include crimes where no report was filed by the police department.</p>
+        <p><strong>Note:</strong> The numbers of crimes are not official. Reports are gathered using an automated program and may include omissions. Also, the type of crime may have changed upon further investigation from the police department.</p>
         <p>For the mobile/tablet version of this app, <a href="index_mobile_cf.php">click here</a>. For a crime map for the city of Waterloo, <a href="index_wloo.php">click here</a>.</p>
 		</td>
 		<td width="10%"><div id="last_updated"></div></td>
 	</tr>
 </table>
 
-<iframe class="map_embed" height="1700" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/cf/map_index_review.php'></iframe>
+<iframe class="map_embed" height="1700" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/cf/map_index_jan.php'></iframe>
 
 </div>
 
 <div id="credits">
-	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	To view the data, <a href="https://docs.google.com/spreadsheet/pub?key=0As3JvOeYDO50dDRYWUdUNEg3QXB0UG42ZE9TNXZCTnc&output=html" target="_blank">click here</a>.
+	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>	|	To view the data, <a href="https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE10Ni01ckJXbnVNUWNzSUhPUEdrUHc&usp=sharing" target="_blank">click here</a>.
     <br />
     * Note: For best results, use a browser other than Internet Explorer.</p>
 

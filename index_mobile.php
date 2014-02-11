@@ -193,7 +193,7 @@ hr {
 	</div>
 </div>
 
-<h2>Crimes reported in the Cedar Valley</h2>
+<h2>Crimes reported in the Cedar Valley: 2014</h2>
 
 <hr>
 
@@ -213,13 +213,13 @@ hr {
 		<td width='50%'>
 			<h3>Waterloo</h3>
 			<a href='templates/wloo/map_index_review.php'>
-				<img src='templates/wloo_screenshot_new.jpg' width='100%' />
+				<img src='templates/wloo_screenshot.jpg' width='100%' />
 			</a>
 		</td>
 		<td width='50%'>
 			<h3>Cedar Falls</h3>
 			<a href='templates/cf/map_index_review.php'>
-				<img src='templates/cf_screenshot_new.jpg' width='100%' />
+				<img src='templates/cf_screenshot.jpg' width='100%' />
 			</a>
 		</td>
 	</tr>
@@ -247,7 +247,7 @@ hr {
 <div id="credits">
 	<p>Interactive by: <a href="http://twitter.com/courieressig" target="_blank">Chris Essig</a>   |   Data provided by: <a href="http://www.waterloopolice.com/images/crpress.PDF" target="_blank">Waterloo Police Department</a>, <a href="http://www.cedarfalls.com/Archive.aspx?AMID=82" target="_blank">Cedar Falls Police Department</a> and <a href="http://www.vpaf.uni.edu/pubsaf/" target="_blank">University of Northern Iowa Police Department</a>
     <br /><br />
-    &copy; Copyright 2012, <a href="/" target="_blank">wcfcourier.com</a>, 100 E. 4th St. Waterloo, IA | <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy/" target="_blank">Privacy Policy</a></p>
+    &copy; Copyright 2014, <a href="/" target="_blank">wcfcourier.com</a>, 100 E. 4th St. Waterloo, IA | <a href="/terms/" target="_blank">Terms of Service</a> and <a href="/privacy/" target="_blank">Privacy Policy</a></p>
 </div>
 
 
