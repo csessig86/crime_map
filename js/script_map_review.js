@@ -1,7 +1,7 @@
 // Information for the base tile
-var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/f14689c8008d43da9028a70e6a8e710a/22677/256/{z}/{x}/{y}.png',
-cloudmadeAttribution = 'Map data CCBYSA &copy; 2012 OpenStreetMap contributors, Imagery &copy; 2012 CloudMade',
-cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
+var openStreetsUrl = 'http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png',
+openStreetsAttribution = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' + '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+openStreets = new L.TileLayer(openStreetsUrl, {maxZoom: 18, attribution: openStreetsAttribution});
 
 // Set default zoom to either Waterloo or Cedar Falls
 // Depends on the url to contain the word 'wloo' or 'cf'
@@ -9,21 +9,21 @@ if (window.document.URL.indexOf('templates/wloo') > 0) {
     var map = new L.Map('map');
     // Mobile, desktop view
     if ($(window).width() < 626) {
-      map.setView(new L.LatLng(42.495, -92.34), 12).addLayer(cloudmade);
+      map.setView(new L.LatLng(42.495, -92.34), 12).addLayer(openStreets);
     } else {
-      map.setView(new L.LatLng(42.495, -92.34), 13).addLayer(cloudmade);
+      map.setView(new L.LatLng(42.495, -92.34), 13).addLayer(openStreets);
     }
 } else if (window.document.URL.indexOf('templates/cf') > 0) {
     var map = new L.Map('map');
     // Mobile, desktop view
     if ($(window).width() < 626) {
-      map.setView(new L.LatLng(42.527, -92.445), 12).addLayer(cloudmade);
+      map.setView(new L.LatLng(42.527, -92.445), 12).addLayer(openStreets);
     } else {
-      map.setView(new L.LatLng(42.527, -92.445), 13).addLayer(cloudmade);
+      map.setView(new L.LatLng(42.527, -92.445), 13).addLayer(openStreets);
     }
 } else {
     var map = new L.Map('map');
-    map.setView(new L.LatLng(42.495, -92.34), 11).addLayer(cloudmade);
+    map.setView(new L.LatLng(42.495, -92.34), 11).addLayer(openStreets);
 }
 
 var hexGeojson;

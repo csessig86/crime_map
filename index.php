@@ -173,6 +173,8 @@ hr {
 
 <hr>
 
+<h4 style="color: #8B2323;">NOTE: This project was depreciated in April and will no longer be updated.</h4>
+
 <p>These maps display crimes reported in Waterloo and Cedar Falls, Iowa. Select a map for a complete breakdown of crimes reported in each town. All data is gathered and released by the Waterloo Police Department, the Cedar Falls Police Department and the University of Northern Iowa Police Department.</p>
 
 <p>For the mobile/tablet version of this app, <a href="index_mobile.php">click here</a>. For reports from 2013, <a href="http://wcfcourier.com/app/crime_map2013/" target="_blank">click here</a>. For partial reports from 2012, <a href="http://wcfcourier.com/app/crime_map2012/" target="_blank">click here</a>.</p>

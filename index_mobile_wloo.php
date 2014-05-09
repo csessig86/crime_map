@@ -206,7 +206,7 @@ hr {
 <p>The chart below displays crimes reported in Waterloo, Iowa, since the beginning of the year. The information is gathered from the Waterloo Police Department, which keeps a <a href="http://waterloopolice.com/index.php?option=com_content&view=section&layout=blog&id=16&Itemid=31" target="_blank">log of calls for service</a>. Not all calls are mapped; minor reports like business checks and traffic stops are not shown below. Instead, we have selected eight categories of reports to map. Also, we do not include crimes where no report was filed by the police department.</p>
 <p><strong>Note:</strong> The numbers of crimes are not official. Reports are gathered using an automated program and may include omissions. Also, the type of crime may have changed upon further investigation from the police department.</p>
 <p>Select a month below to filter the number of reported crimes that are pinpointed on the map.</p>
-<iframe id="crime_iframe_id" name="crime_iframe" class="map_embed" height="1750" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_jan.php'></iframe>
+<iframe id="crime_iframe_id" name="crime_iframe" class="map_embed" height="1750" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_april.php'></iframe>
 
 </div><!-- close main_content -->
 

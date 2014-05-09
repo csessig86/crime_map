@@ -17,6 +17,12 @@
         <li>
             <a href="map_index_feb.php">Feb.</a>
         </li>
+        <li>
+            <a href="map_index_mar.php">March</a>
+        </li>
+        <li>
+            <a href="map_index_april.php">April</a>
+        </li>
     </ul>
 </div>
 </div>
@@ -32,6 +38,8 @@
 			<li><a href="map_index_all.php">All reports of crime</a></li>
             <li><a href="map_index_jan.php">January reports</a></li>
             <li><a href="map_index_feb.php">February reports</a></li>
+            <li><a href="map_index_mar.php">March reports</a></li>
+            <li><a href="map_index_april.php">April reports</a></li>
     	</ul>
 	</div>
 	<h2>Compare crimes: 2014</h2>

@@ -198,7 +198,7 @@ hr {
 	</tr>
 </table>
 
-<iframe class="map_embed" height="1700" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_jan.php'></iframe>
+<iframe class="map_embed" height="1700" width="940" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src='templates/wloo/map_index_april.php'></iframe>
 
 </div>
 
